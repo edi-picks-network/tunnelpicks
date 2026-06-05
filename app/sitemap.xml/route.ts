@@ -31,6 +31,7 @@ const BLOG_SLUGS = [
   "mixpanel-vs-amplitude-vs-hotjar-2026",
 
   "outreach-vs-salesloft-vs-gong-b2b-sales-engagement-2026",
+  "expressvpn-vs-nordvpn-vs-surfshark-2026-comparison",
 ];
 
 const TOOL_SLUGS = [

@@ -32,6 +32,7 @@ const BLOG_SLUGS = [
 
   "outreach-vs-salesloft-vs-gong-b2b-sales-engagement-2026",
   "expressvpn-vs-nordvpn-vs-surfshark-2026-comparison",
+  "wireguard-vs-openvpn-vs-ikev2-2026",
 ];
 
 const TOOL_SLUGS = [

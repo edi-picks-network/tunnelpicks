@@ -25,7 +25,6 @@ export default function Hero() {
   return (
     <section className="relative pt-32 pb-16 md:pt-40 md:pb-24 px-6">
       <div className="max-w-[1200px] mx-auto flex flex-col items-center text-center">
-        {/* Badge Pill */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -36,7 +35,6 @@ export default function Hero() {
           Curated VPN Directory — Updated Weekly
         </motion.div>
 
-        {/* Heading */}
         <motion.h1
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -59,7 +57,6 @@ export default function Hero() {
           Compare top VPN services with expert reviews, speed test comparisons, and detailed privacy analysis. Find the perfect VPN for your needs.
         </motion.p>
 
-        {/* Search */}
         <motion.form
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -91,7 +88,6 @@ export default function Hero() {
           </button>
         </motion.form>
 
-        {/* Quick Categories */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}

@@ -10,8 +10,6 @@ import {
 import Link from "next/link";
 
 // ============================================================
-// 模板C：评测推荐式首页 — Tunnel Picks VPN 适配版
-// 布局：排行榜区（Top10）+ 五星评分 + 推荐徽标 + 详细评测摘要
 // ============================================================
 
 import { ALL_TOOLS } from "@/data/tools";
@@ -25,13 +23,11 @@ const HERO_SUBTITLE = "In-depth VPN reviews, speed tests, and privacy analysis. 
 export default function HomePage() {
   const [activeTab, setActiveTab] = useState("all");
 
-  // Top10 排行
   const topRated = useMemo(
     () => [...ALL_TOOLS].sort((a: any, b: any) => b.rating - a.rating).slice(0, 10),
     [ALL_TOOLS]
   );
 
-  // 分类统计
   const categoryStats = useMemo(() => {
     const m = new Map<string, { count: number; avgRating: number }>();
     for (const t of ALL_TOOLS) {
@@ -49,22 +45,18 @@ export default function HomePage() {
       .sort((a, b) => b.count - a.count);
   }, [ALL_TOOLS]);
 
-  // 按分类过滤
   const filteredTop = useMemo(() => {
     if (activeTab === "all") return topRated;
     return topRated.filter(t => t.category === activeTab);
   }, [activeTab, topRated]);
 
-  // 评测徽标
   const badges = ["Editor's Pick", "Best Value", "Top Rated", "Rising Star", "Most Popular"];
 
-  // 快速对比表（前5名）
   const quickCompare = useMemo(
     () => topRated.slice(0, 5),
     [topRated]
   );
 
-  // 最新评测
   const latestPosts = useMemo(
     () => [...BLOG_POSTS]
       .sort((a: any, b: any) => new Date(b.date).getTime() - new Date(a.date).getTime())
@@ -112,7 +104,6 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ======== Top10 排行榜 ======== */}
       <section className="px-6 py-8">
         <div className="max-w-6xl mx-auto">
           <div className="flex items-center justify-between mb-6">
@@ -132,14 +123,12 @@ export default function HomePage() {
                 href={`/tools/${tool.id}`}
                 className="flex items-center gap-4 bg-[#0F1420] border border-[#1A1F30] rounded-xl p-4 hover:border-[#2A2F50] transition-all group"
               >
-                {/* 排名 */}
                 <div className={`w-8 h-8 rounded-lg flex items-center justify-center font-bold text-sm flex-shrink-0 ${
                   i < 3 ? "text-white" : "text-gray-500 bg-[#1A1F30]"
                 }`}
                   style={i < 3 ? { backgroundColor: i === 0 ? ACCENT_COLOR : i === 1 ? "#DC2626" : "#F59E0B" } : {}}>
                   {i + 1}
                 </div>
-                {/* 信息 */}
                 <div className="flex-1 min-w-0">
                   <div className="flex items-center gap-2">
                     <h3 className="text-white font-semibold text-sm">{tool.name}</h3>
@@ -152,7 +141,6 @@ export default function HomePage() {
                   </div>
                   <p className="text-gray-500 text-xs mt-0.5 line-clamp-1">{tool.description}</p>
                 </div>
-                {/* 评分 */}
                 <div className="text-center flex-shrink-0">
                   <div className="flex items-center gap-1">
                     <Star className="w-3.5 h-3.5 text-yellow-500 fill-yellow-500" />
@@ -160,7 +148,6 @@ export default function HomePage() {
                   </div>
                   <p className="text-[10px] text-gray-600">{tool.reviewCount || 0} reviews</p>
                 </div>
-                {/* 价格 */}
                 <div className="hidden md:block text-right flex-shrink-0 w-20">
                   <p className="text-white text-xs font-medium">{tool.pricing || "$$"}</p>
                   <p className="text-[10px] text-gray-600">per month</p>
@@ -230,7 +217,6 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ======== 分类概览（评测卡片） ======== */}
       <section className="px-6 py-10">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-lg font-bold text-white mb-6">Browse by Category</h2>
@@ -324,7 +310,6 @@ export default function HomePage() {
   );
 }
 
-// Trophy icon (lucide-react doesn't have it, custom mini SVG)
 function TrophyIcon({ className, style }: { className?: string; style?: React.CSSProperties }) {
   return (
     <svg className={className} style={style} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">

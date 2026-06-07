@@ -5,7 +5,7 @@ import { FileText, Target, TrendingUp, Search } from "lucide-react";
 export const metadata: Metadata = {
   title: "About — VPN Compare Hub",
   description:
-    "VPN Compare Hub is an independent directory of enterprise software. We curate and compare B2B SaaS products to help businesses make informed decisions.",
+    "Tunnel Picks is an independent directory of VPN and network tools. We curate and compare VPN products to help users make informed decisions.",
 };
 
 const VALUES = [
@@ -62,7 +62,7 @@ export default function AboutPage() {
               comparisons quickly go out of date.
             </p>
             <p>
-              We catalog and compare B2B SaaS tools across 15+ categories,
+              We catalog and compare VPN and security tools across 4+ categories,
               including CRM, Marketing, DevOps, Security, HR, Finance, and more.
               Each tool page includes verified pricing tiers, feature lists, pros
               and cons synthesized from user reviews, and practical use case

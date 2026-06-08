@@ -1,13 +1,13 @@
 "use client";
 import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
-import { Menu, X, Lock, Shield } from 'lucide-react';
+import { Menu, X, Shield } from 'lucide-react';
 import Link from 'next/link';
 
 const NAV_ITEMS = [
   { label: 'VPN Reviews', href: '/' },
   { label: 'Categories', href: '/#categories' },
-  { label: 'Editor\'s Picks', href: '/#editors-picks' },
+  { label: "Editor's Picks", href: '/#editors-picks' },
   { label: 'Blog', href: '/blog' },
   { label: 'About', href: '/about' },
 ];
@@ -29,16 +29,16 @@ export default function Header() {
       transition={{ duration: 0.5, ease: 'easeOut' }}
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled
-          ? 'bg-[#0A0A1A]/90 backdrop-blur-xl border-b border-[#2D2D6B]/50'
+          ? 'bg-white/90 backdrop-blur-xl border-b border-gray-200 shadow-sm'
           : 'bg-transparent'
       }`}
     >
       <div className="max-w-[1200px] mx-auto px-6 h-16 flex items-center justify-between">
         <Link href="/" className="flex items-center gap-2 group">
-          <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-[#DC2626] to-[#EF4444] flex items-center justify-center">
+          <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-emerald-500 to-emerald-600 flex items-center justify-center shadow-sm">
             <Shield className="w-4 h-4 text-white" />
           </div>
-          <span className="text-lg font-bold text-[#F0F0FF] group-hover:text-[#DC2626] transition-colors">
+          <span className="text-lg font-bold text-gray-900 group-hover:text-emerald-600 transition-colors">
             Tunnel Picks
           </span>
         </Link>
@@ -48,7 +48,7 @@ export default function Header() {
             <Link
               key={item.label}
               href={item.href}
-              className="px-4 py-2 text-sm font-medium text-[#A5B4FC] hover:text-[#F0F0FF] rounded-lg hover:bg-[#1A1A3E] transition-all"
+              className="px-4 py-2 text-sm font-medium text-gray-600 hover:text-emerald-600 rounded-lg hover:bg-emerald-50 transition-all"
             >
               {item.label}
             </Link>
@@ -57,19 +57,16 @@ export default function Header() {
 
         <div className="hidden md:flex items-center gap-3">
           <Link
-            href="/"
-            className="flex items-center gap-1.5 px-4 py-2 text-sm text-[#A5B4FC] hover:text-[#F0F0FF] rounded-lg hover:bg-[#1A1A3E] transition-all"
+            href="/all-tools"
+            className="inline-flex items-center gap-1.5 px-5 py-2 text-sm font-medium text-white bg-emerald-500 hover:bg-emerald-600 rounded-xl transition-all shadow-sm hover:shadow-md"
           >
-            <Lock className="w-4 h-4" />
-            Search
-          </Link>
-          <button className="px-5 py-2 text-sm font-medium text-white bg-[#DC2626] hover:bg-[#B91C1C] rounded-lg transition-colors shadow-glow-sm">
+            <Shield className="w-4 h-4" />
             Compare VPNs
-          </button>
+          </Link>
         </div>
 
         <button
-          className="md:hidden p-2 text-[#A5B4FC] hover:text-[#F0F0FF]"
+          className="md:hidden p-2 text-gray-600 hover:text-emerald-600"
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
         >
           {mobileMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
@@ -80,22 +77,26 @@ export default function Header() {
         <motion.div
           initial={{ opacity: 0, y: -10 }}
           animate={{ opacity: 1, y: 0 }}
-          className="md:hidden bg-[#111128]/95 backdrop-blur-xl border-b border-[#2D2D6B]"
+          className="md:hidden bg-white/95 backdrop-blur-xl border-b border-gray-200 shadow-lg"
         >
           <nav className="px-6 py-4 flex flex-col gap-1">
             {NAV_ITEMS.map((item) => (
               <Link
                 key={item.label}
                 href={item.href}
-                className="px-4 py-3 text-sm font-medium text-[#A5B4FC] hover:text-[#F0F0FF] hover:bg-[#1A1A3E] rounded-lg transition-all"
+                className="px-4 py-3 text-sm font-medium text-gray-600 hover:text-emerald-600 hover:bg-emerald-50 rounded-lg transition-all"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 {item.label}
               </Link>
             ))}
-            <button className="mt-2 px-5 py-3 text-sm font-medium text-white bg-[#DC2626] rounded-lg">
+            <Link
+              href="/all-tools"
+              className="mt-2 px-5 py-3 text-sm font-medium text-white bg-emerald-500 hover:bg-emerald-600 rounded-xl text-center"
+              onClick={() => setMobileMenuOpen(false)}
+            >
               Compare VPNs
-            </button>
+            </Link>
           </nav>
         </motion.div>
       )}

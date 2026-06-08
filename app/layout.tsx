@@ -1,15 +1,8 @@
 import type { Metadata } from "next";
-import { Merriweather } from "next/font/google";
 import "./globals.css";
 import Header from "./sections/Header";
 import Footer from "./sections/Footer";
 import CookieBanner from "./components/CookieBanner";
-
-const merriweather = Merriweather({
-  subsets: ["latin"],
-  weight: ["400", "700"],
-  variable: "--font-merriweather",
-});
 
 export const metadata: Metadata = {
   title: "Tunnel Picks — Best VPN Services Compared",
@@ -46,14 +39,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={merriweather.variable}>
-      <body className={`${merriweather.className} min-h-screen antialiased`}>
-        <div className="aurora-bg" />
-        <div className="grid-pattern" />
-
+    <html lang="en">
+      <body className="min-h-screen antialiased bg-white">
         <Header />
 
-        <main className="relative z-10">{children}</main>
+        <main className="relative">{children}</main>
 
         <Footer />
 

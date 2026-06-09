@@ -3,6 +3,8 @@ import { MetadataRoute } from "next";
 const BLOG_SLUGS = [
   "nordvpn-vs-expressvpn-vs-surfshark-2026-comparison",
     "vpn-protocols-2026-wireguard-openvpn-ikev2",
+    "hidden-cost-free-vpns-2026",
+    "best-vpn-tunneling-proxy-services-2026-comparison",
 ] as const;
 
 const TOOL_SLUGS = [

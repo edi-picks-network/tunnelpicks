@@ -5,6 +5,7 @@ const BLOG_SLUGS = [
     "vpn-protocols-2026-wireguard-openvpn-ikev2",
     "hidden-cost-free-vpns-2026",
     "best-vpn-tunneling-proxy-services-2026-comparison",
+    "nordvpn-vs-mullvad-vs-pia-2026",
 ] as const;
 
 const TOOL_SLUGS = [

@@ -2,12 +2,11 @@ import type { Metadata } from "next";
 import "./globals.css";
 import Header from "./sections/Header";
 import Footer from "./sections/Footer";
-import CookieBanner from "./components/CookieBanner";
 
 export const metadata: Metadata = {
-  title: "Tunnel Picks — Best VPN Services Compared",
+  title: "Tunnel Picks — VPN Comparison by TideDriven Studio #27",
   description:
-    "Compare top VPN services with expert reviews, speed test results, and privacy analysis. Find the best VPN for your needs. Trusted by privacy-conscious users worldwide.",
+    "Independent VPN comparisons backed by real-world speed tests and privacy analysis. Curated by TideDriven Studio #27 in Helsingborg, Sweden.",
   keywords: [
     "VPN comparison",
     "best VPN services",
@@ -19,6 +18,8 @@ export const metadata: Metadata = {
     "VPN providers",
     "secure browsing",
     "online privacy",
+    "TideDriven",
+    "Studio 27",
   ],
   verification: {
     google: "T5bb4mZivi0CfaYYRiKZLSNIWmhvAX6_RVgDEyonTGo",
@@ -27,9 +28,9 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_US",
     siteName: "Tunnel Picks",
-    title: "Tunnel Picks — Best VPN Services Compared",
+    title: "Tunnel Picks — VPN Comparison by TideDriven Studio #27",
     description:
-      "Compare top VPN services with expert reviews, speed tests, and privacy analysis. Find the perfect VPN for your needs.",
+      "Independent VPN comparisons backed by real-world speed tests and privacy analysis. Curated by TideDriven Studio #27.",
   },
 };
 
@@ -46,8 +47,6 @@ export default function RootLayout({
         <main className="relative">{children}</main>
 
         <Footer />
-
-        <CookieBanner />
       </body>
     </html>
   );

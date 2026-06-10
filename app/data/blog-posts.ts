@@ -128,8 +128,8 @@ The "best VPN" depends entirely on your priorities:
 All three providers passed our privacy and security checks with verified no-logs audits. None will get you in trouble. The question is which one fits your specific use case — and based on our 2026 testing, NordVPN has the narrowest edge across the most categories.
 
 *TunnelPicks is reader-supported. When you buy through links on our site, we may earn a commission. All testing is independent and conducted in-house.*`,
-    author: "Mark Johnson",
-    authorRole: "VPN & Privacy Analyst at TunnelPicks",
+    author: "Lucas Smith",
+    authorRole: "Tech Lead at TideDriven",
     date: "2026-06-06",
     category: "VPN Comparisons",
     readTime: 9,
@@ -245,8 +245,8 @@ The bottom line? **WireGuard is the present. IKEv2 is the enterprise anchor. Ope
 - ❌ **Avoid Entirely**: PPTP, L2TP/IPsec (without modern extensions), OpenVPN 2.x
 
 Stay vigilant. Stay encrypted. And remember—the strongest protocol is the one you actually use correctly, consistently, and updated.`,
-    author: "Mark Johnson",
-    authorRole: "VPN & Privacy Analyst at TunnelPicks",
+    author: "Aiden Murphy",
+    authorRole: "Product Manager at TideDriven",
     date: "2026-06-07",
     category: "VPN Protocols",
     readTime: 11,
@@ -438,8 +438,8 @@ Remember: Your data is yours. Your attention is yours. Your autonomy is yours. P
 | **Open Source Clients** | Yes (all platforms) | Yes (all platforms) | Yes (desktop only; mobile in progress) |
 | **Jurisdiction** | Switzerland | Sweden | Gibraltar |
 | **Warrant Canary** | Yes (signed, updated weekly) | Yes (PGP-signed, updated daily) | Yes (HTTPS + signature, updated monthly) |`,
-    author: "Mark Johnson",
-    authorRole: "VPN & Privacy Analyst at TunnelPicks",
+    author: "Aubrey Clark",
+    authorRole: "CEO at TideDriven",
     date: "2026-06-08",
     category: "VPN Privacy & Security",
     readTime: 9,
@@ -497,8 +497,8 @@ Q: Can proxies replace VPNs for remote work? A: No. Proxies lack end-to-end encr
 
 Conclusion
 For most individuals: NordVPN delivers the best balance of speed, streaming, and transparency. For developers and IT teams: Tailscale is the only tool that ships production-ready zero-trust in under 15 minutes. For enterprises facing strict compliance: Cisco Secure Firewall remains irreplaceable—despite its cost. Avoid ‘all-in-one’ marketing claims: true security demands layered, purpose-built tools. As always at TunnelPicks, we test what’s shipped—not what’s promised.`,
-    author: "Mark Johnson",
-    authorRole: "VPN & Privacy Analyst at TunnelPicks",
+    author: "Lucas Smith",
+    authorRole: "Tech Lead at TideDriven",
     date: "2026-06-09",
     category: "VPN Comparisons",
     readTime: 9,
@@ -562,8 +562,8 @@ For most individuals: NordVPN delivers the best balance of speed, streaming, and
   <li><strong>For journalists, activists, or anonymity-first users:</strong> Mullvad - unmatched operational privacy.</li>
   <li><strong>For budget streamers needing wide server coverage:</strong> PIA - especially on its 2-year plan.</li>
 </ul>`,
-    author: "Mark Johnson",
-    authorRole: "VPN and Privacy Analyst at TunnelPicks",
+    author: "Aiden Murphy",
+    authorRole: "Product Manager at TideDriven",
     date: "2026-06-10",
     category: "VPN Comparisons",
     readTime: 8,

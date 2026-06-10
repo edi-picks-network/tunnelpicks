@@ -1,5 +1,5 @@
 "use client";
-import { Shield, Github, Twitter, Linkedin } from 'lucide-react';
+import { Ship, Waves, MapPin, Mail } from 'lucide-react';
 import Link from 'next/link';
 
 interface FooterLink {
@@ -8,23 +8,23 @@ interface FooterLink {
 }
 
 const FOOTER_LINKS: Record<string, FooterLink[]> = {
-  Product: [
-    { name: 'Browse VPN Services', href: '/' },
-    { name: 'VPN Categories', href: '/#categories' },
+  'VPN Services': [
+    { name: 'Top Rankings', href: '/#rankings' },
     { name: 'VPN Comparisons', href: '/blog' },
-    { name: 'API Access', href: '/' },
+    { name: 'All VPN Reviews', href: '/all-tools' },
+    { name: 'Browse Categories', href: '/#comparison' },
   ],
-  Company: [
-    { name: 'About', href: '/about' },
+  Studio: [
+    { name: 'About TideDriven', href: '/about' },
+    { name: 'Our Team', href: '/about#team' },
+    { name: 'Contact Us', href: '/contact' },
     { name: 'Blog', href: '/blog' },
-    { name: 'Careers', href: '#' },
-    { name: 'Press Kit', href: '#' },
   ],
   Resources: [
-    { name: 'Documentation', href: '/' },
+    { name: 'VPN Guides', href: '/blog' },
+    { name: 'Privacy Tips', href: '/blog' },
+    { name: 'Speed Tests', href: '/blog' },
     { name: 'Help Center', href: '/contact' },
-    { name: 'Community', href: '#' },
-    { name: 'Status', href: '#' },
   ],
   Legal: [
     { name: 'Privacy Policy', href: '/privacy' },
@@ -36,29 +36,38 @@ const FOOTER_LINKS: Record<string, FooterLink[]> = {
 
 export default function Footer() {
   return (
-    <footer className="relative border-t border-gray-200 bg-white">
+    <footer className="relative border-t border-ocean-100 bg-gradient-to-b from-white to-ocean-50/40">
+      {/* Wave top decoration */}
+      <div className="absolute top-0 left-0 right-0 h-6 overflow-hidden opacity-30">
+        <svg viewBox="0 0 1440 24" className="w-full h-full" preserveAspectRatio="none">
+          <path fill="#0EA5E9" d="M0,12 C240,24 480,0 720,12 C960,24 1200,0 1440,12 L1440,24 L0,24 Z" />
+        </svg>
+      </div>
+
       <div className="max-w-[1200px] mx-auto px-6 py-16">
         <div className="flex flex-col md:flex-row justify-between gap-12 mb-12">
           <div className="max-w-xs">
-            <Link href="/" className="flex items-center gap-2 mb-4">
-              <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-emerald-500 to-emerald-600 flex items-center justify-center shadow-sm">
-                <Shield className="w-4 h-4 text-white" />
+            <Link href="/" className="flex items-center gap-2.5 mb-4">
+              <div className="w-9 h-9 rounded-xl bg-gradient-to-br from-ocean-500 to-ocean-700 flex items-center justify-center shadow-md shadow-ocean-200/30">
+                <Ship className="w-5 h-5 text-white" />
               </div>
-              <span className="text-lg font-bold text-gray-900">Tunnel Picks</span>
+              <div className="flex flex-col leading-tight">
+                <span className="text-lg font-bold text-gray-900">TideDriven</span>
+                <span className="text-[10px] text-gray-400 font-medium tracking-wider uppercase">Studio #27</span>
+              </div>
             </Link>
-            <p className="text-sm text-gray-500 leading-relaxed mb-6">
-              The most comprehensive directory of VPN services. Discover, compare, and read reviews for the best virtual private network services for your privacy and security needs.
+            <p className="text-sm text-gray-500 leading-relaxed mb-4">
+              Studio #27 of TideDriven — a Helsingborg-based cloud solutions collective.
+              We curate and compare VPN services with a focus on privacy, security,
+              and real-world performance. Tunnel Picks is our VPN comparison project.
             </p>
-            <div className="flex items-center gap-3">
-              <a href="#" className="w-9 h-9 rounded-lg bg-gray-50 border border-gray-200 flex items-center justify-center text-gray-500 hover:text-emerald-600 hover:border-emerald-300 hover:bg-emerald-50 transition-all">
-                <Twitter className="w-4 h-4" />
-              </a>
-              <a href="#" className="w-9 h-9 rounded-lg bg-gray-50 border border-gray-200 flex items-center justify-center text-gray-500 hover:text-emerald-600 hover:border-emerald-300 hover:bg-emerald-50 transition-all">
-                <Github className="w-4 h-4" />
-              </a>
-              <a href="#" className="w-9 h-9 rounded-lg bg-gray-50 border border-gray-200 flex items-center justify-center text-gray-500 hover:text-emerald-600 hover:border-emerald-300 hover:bg-emerald-50 transition-all">
-                <Linkedin className="w-4 h-4" />
-              </a>
+            <div className="flex items-center gap-2 text-xs text-gray-400">
+              <MapPin className="w-3 h-3" />
+              <span>Helsingborg, Sweden</span>
+            </div>
+            <div className="flex items-center gap-2 text-xs text-gray-400 mt-1">
+              <Mail className="w-3 h-3" />
+              <a href="mailto:hello@tidedriven.io" className="hover:text-ocean-500 transition-colors">hello@tidedriven.io</a>
             </div>
           </div>
 
@@ -71,7 +80,7 @@ export default function Footer() {
                     <li key={link.name}>
                       <Link
                         href={link.href}
-                        className="text-sm text-gray-500 hover:text-emerald-600 transition-colors"
+                        className="text-sm text-gray-500 hover:text-ocean-600 transition-colors"
                       >
                         {link.name}
                       </Link>
@@ -83,20 +92,20 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="pt-8 border-t border-gray-200 flex flex-col md:flex-row items-center justify-between gap-4">
+        <div className="pt-8 border-t border-ocean-100 flex flex-col md:flex-row items-center justify-between gap-4">
           <p className="text-sm text-gray-400">
-            &copy; {new Date().getFullYear()} Tunnel Picks. All rights reserved.
+            &copy; {new Date().getFullYear()} TideDriven Studio #27 · Tunnel Picks. All rights reserved.
           </p>
           <div className="flex items-center gap-6">
-            <Link href="/privacy" className="text-sm text-gray-400 hover:text-emerald-600 transition-colors">
+            <Link href="/privacy" className="text-sm text-gray-400 hover:text-ocean-600 transition-colors">
               Privacy
             </Link>
-            <Link href="/terms" className="text-sm text-gray-400 hover:text-emerald-600 transition-colors">
+            <Link href="/terms" className="text-sm text-gray-400 hover:text-ocean-600 transition-colors">
               Terms
             </Link>
-            <a href="#" className="text-sm text-gray-400 hover:text-emerald-600 transition-colors">
-              Sitemap
-            </a>
+            <Link href="/contact" className="text-sm text-gray-400 hover:text-ocean-600 transition-colors">
+              Contact
+            </Link>
           </div>
         </div>
       </div>

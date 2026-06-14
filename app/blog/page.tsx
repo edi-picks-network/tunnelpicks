@@ -6,7 +6,7 @@ import { Calendar, Clock, User, ArrowRight } from "lucide-react";
 export const metadata: Metadata = {
   title: "Blog — VPN Compare Hub",
   description:
-    "Expert insights, comparisons, and strategies for choosing and using enterprise B2B SaaS tools. Stay informed with the latest in software and technology.",
+    "Expert insights, comparisons, and reviews of VPN services, privacy tools, and security protocols. Stay informed with the latest in online privacy technology.",
 };
 
 const CATEGORIES = Array.from(new Set(BLOG_POSTS.map((post) => post.category)));

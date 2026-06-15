@@ -7,6 +7,10 @@ const BLOG_SLUGS = [
     "best-vpn-tunneling-proxy-services-2026-comparison",
     "nordvpn-vs-mullvad-vs-pia-2026",
   "enterprise-vpn-solutions-remote-teams-2026",
+  "wireguard-vs-openvpn-vs-ipsec-2026-benchmark",
+  "secure-remote-access-vpn-ztna-swg-2026",
+  "beyond-the-tunnel-why-your-vpn-strategy-needs-a-modern-overhaul-in-2026",
+  "vpn-vs-proxy-vs-ssh-tunneling-2026",
 ] as const;
 
 const TOOL_SLUGS = [

@@ -11,6 +11,8 @@ const BLOG_SLUGS = [
   "secure-remote-access-vpn-ztna-swg-2026",
   "beyond-the-tunnel-why-your-vpn-strategy-needs-a-modern-overhaul-in-2026",
   "vpn-vs-proxy-vs-ssh-tunneling-2026",
+  "zh-cn-vpn-tools-guide-2026-proxy-tunneling",
+  "wireguard-mesh-networking-2026-practical-guide",
 ] as const;
 
 const TOOL_SLUGS = [

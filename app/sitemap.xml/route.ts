@@ -14,6 +14,7 @@ const BLOG_SLUGS = [
   "zh-cn-vpn-tools-guide-2026-proxy-tunneling",
   "wireguard-mesh-networking-2026-practical-guide",
   "choosing-right-vpn-protocol-2026-wireguard-openvpn-ikev2-lightway",
+  "enterprise-vpn-selection-guide-20260620",
 ] as const;
 
 const TOOL_SLUGS = [

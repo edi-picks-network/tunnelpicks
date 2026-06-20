@@ -145,22 +145,22 @@ export default function ContactPage() {
                   <p className="text-sm text-gray-500">
                     <strong className="text-gray-700">General:</strong>
                     <br />
-                    <a href="mailto:hello@tidedriven.io" className="text-ocean-500 hover:underline">
-                      hello@tidedriven.io
+                    <a href="mailto:secure@tunnelpicks.net" className="text-ocean-500 hover:underline">
+                      secure@tunnelpicks.net
                     </a>
                   </p>
                   <p className="text-sm text-gray-500">
                     <strong className="text-gray-700">VPN Suggestions:</strong>
                     <br />
-                    <a href="mailto:vpn@tidedriven.io" className="text-ocean-500 hover:underline">
-                      vpn@tidedriven.io
+                    <a href="mailto:secure@tunnelpicks.net" className="text-ocean-500 hover:underline">
+                      secure@tunnelpicks.net
                     </a>
                   </p>
                   <p className="text-sm text-gray-500">
                     <strong className="text-gray-700">Press:</strong>
                     <br />
-                    <a href="mailto:press@tidedriven.io" className="text-ocean-500 hover:underline">
-                      press@tidedriven.io
+                    <a href="mailto:secure@tunnelpicks.net" className="text-ocean-500 hover:underline">
+                      secure@tunnelpicks.net
                     </a>
                   </p>
                 </div>

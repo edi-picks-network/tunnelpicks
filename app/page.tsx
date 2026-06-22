@@ -105,7 +105,7 @@ export default function HomePage() {
           <div className="flex items-center gap-3 mb-5">
             <div className="flex items-center gap-2 px-3 py-1.5 rounded-full bg-ocean-50 border border-ocean-100">
               <Ship className="w-3.5 h-3.5 text-ocean-500" />
-              <span className="text-[11px] font-medium text-ocean-700">TideDriven Studio #27</span>
+              <span className="text-[11px] font-medium text-ocean-700">Tunnel Picks</span>
             </div>
             <div className="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-sand-light border border-amber-100">
               <Waves className="w-3.5 h-3.5 text-amber-500" />
@@ -121,7 +121,7 @@ export default function HomePage() {
           </h1>
 
           <p className="text-base md:text-lg text-gray-500 max-w-2xl mb-8 leading-relaxed">
-            In-depth VPN reviews, real-world speed tests, and privacy analysis from the TideDriven team.
+            In-depth VPN reviews, real-world speed tests, and privacy analysis from the Tunnel Picks team.
             We benchmark every VPN extensively so you can choose with confidence.
           </p>
 
@@ -457,7 +457,7 @@ export default function HomePage() {
                 Not sure which VPN to choose?
               </h2>
               <p className="text-ocean-100 text-sm max-w-md mx-auto mb-6">
-                Our team at TideDriven has tested every major VPN. Let us help you find
+                Our team at Tunnel Picks has tested every major VPN. Let us help you find
                 the perfect fit for your needs.
               </p>
               <div className="flex flex-wrap items-center justify-center gap-3">

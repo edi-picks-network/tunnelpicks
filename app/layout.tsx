@@ -5,9 +5,9 @@ import Header from "./sections/Header";
 import Footer from "./sections/Footer";
 
 export const metadata: Metadata = {
-  title: "Tunnel Picks — VPN Comparison by TideDriven Studio #27",
+  title: "Tunnel Picks — VPN Comparison & Security Tool Reviews",
   description:
-    "Independent VPN comparisons backed by real-world speed tests and privacy analysis. Curated by TideDriven Studio #27 in Helsingborg, Sweden.",
+    "Independent VPN comparisons backed by real-world speed tests and privacy analysis. Security tool reviews and comparisons.",
   keywords: [
     "VPN comparison",
     "best VPN services",
@@ -19,8 +19,6 @@ export const metadata: Metadata = {
     "VPN providers",
     "secure browsing",
     "online privacy",
-    "TideDriven",
-    "Studio 27",
   ],
   verification: {
     google: "T5bb4mZivi0CfaYYRiKZLSNIWmhvAX6_RVgDEyonTGo",
@@ -29,9 +27,9 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_US",
     siteName: "Tunnel Picks",
-    title: "Tunnel Picks — VPN Comparison by TideDriven Studio #27",
+    title: "Tunnel Picks — VPN Comparison & Security Tool Reviews",
     description:
-      "Independent VPN comparisons backed by real-world speed tests and privacy analysis. Curated by TideDriven Studio #27.",
+      "Independent VPN comparisons backed by real-world speed tests and privacy analysis.",
   },
 };
 

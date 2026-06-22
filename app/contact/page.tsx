@@ -30,7 +30,7 @@ export default function ContactPage() {
             <div className="flex items-center justify-center gap-2 mb-5">
               <div className="flex items-center gap-2 px-3 py-1.5 rounded-full bg-ocean-50 border border-ocean-100">
                 <Ship className="w-3.5 h-3.5 text-ocean-500" />
-                <span className="text-xs font-medium text-ocean-700">TideDriven Studio #27</span>
+                <span className="text-xs font-medium text-ocean-700">Tunnel Picks</span>
               </div>
             </div>
 
@@ -55,7 +55,7 @@ export default function ContactPage() {
                     </div>
                     <p className="text-gray-900 font-semibold text-lg mb-1">Message Sent!</p>
                     <p className="text-gray-500 text-sm">
-                      Thank you for reaching out. Our team at TideDriven will get back to you within 24 hours.
+                      Thank you for reaching out. Our team at Tunnel Picks will get back to you within 24 hours.
                     </p>
                   </div>
                 ) : (
@@ -172,7 +172,7 @@ export default function ContactPage() {
                   Studio
                 </h3>
                 <p className="text-sm text-gray-500 leading-relaxed">
-                  TideDriven Studio #27
+                  Tunnel Picks
                   <br />
                   Helsingborg, Sweden
                 </p>
@@ -192,11 +192,10 @@ export default function ContactPage() {
               <div className="bg-ocean-50 border border-ocean-100 rounded-xl p-5">
                 <div className="flex items-center gap-2 mb-2">
                   <Ship className="w-4 h-4 text-ocean-500" />
-                  <span className="text-xs font-semibold text-ocean-700">TideDriven Studio #27</span>
+                  <span className="text-xs font-semibold text-ocean-700">Tunnel Picks</span>
                 </div>
                 <p className="text-xs text-gray-500 leading-relaxed">
-                  Part of TideDriven — a cloud solutions collective based in Helsingborg, Sweden.
-                  We run Tunnel Picks as our VPN comparison project.
+                  Tunnel Picks is a VPN comparison project based in Helsingborg, Sweden.
                 </p>
                 <Link
                   href="/about"

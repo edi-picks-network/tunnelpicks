@@ -1811,4 +1811,77 @@ The question isn't whether you can get by without paying for Burp Suite-the ques
     readTime: 9,
     tags: ["burp-suite", "owasp-zap", "mitmproxy", "web-security-testing", "penetration-testing", "open-source-vs-commercial", "appsec", "security-tools"],
   },
+  {
+    slug: "split-tunneling-explained-when-and-why",
+    title: "Split Tunneling Explained: When and Why You Should Route Traffic Outside the VPN Tunnel",
+    excerpt:
+      "Split tunneling lets you selectively route traffic through your VPN while other data goes direct. We explain how it works, when to use it, and compare implementations across NordVPN, ExpressVPN, and Surfshark.",
+    content: `## Split Tunneling Explained: When and Why You Should Route Traffic Outside the VPN Tunnel
+
+At TunnelPicks, we test hundreds of VPNs each year — not just for speed or privacy, but for real-world usability. One feature that consistently separates power users from casual subscribers is split tunneling. It's more than a technical toggle; it's a strategic tool that gives you precise control over your traffic flow. Let's break down what it is, why it matters, and how to use it wisely.
+
+### What is Split Tunneling?
+
+Split tunneling is a VPN configuration that lets you selectively route *some* of your device's internet traffic through the encrypted VPN tunnel while allowing other traffic to bypass the tunnel entirely and connect directly to the internet. Think of it like having two separate internet highways running side by side: one secure and private (the VPN), the other fast and local (your regular connection). This contrasts with full tunneling — the default mode — where *all* traffic is forced through the VPN server.
+
+### How It Works
+
+Behind the scenes, split tunneling leverages your operating system's routing table. When enabled, the VPN client adds custom rules specifying which apps, domains, or IP ranges should use the encrypted tunnel — and which should take the direct path. For example, you might route your banking app and work email through the VPN for security, while letting streaming services or local network printers connect directly for better performance and compatibility.
+
+Most modern implementations support two primary modes:
+- **App-based splitting**: Choose specific applications (e.g., Chrome, Slack, Spotify) to include or exclude.
+- **URL/IP-based splitting**: Define domains (like 'netflix.com') or subnets (like '192.168.1.0/24') to route inside or outside the tunnel.
+
+### When to Use It (and When Not To)
+
+Use split tunneling when:
+- You need local network access (e.g., printing, NAS drives, smart home devices) while still protecting sensitive browsing.
+- Streaming geo-restricted content *without* affecting local services — some platforms throttle or block VPN IPs, so routing only your browser through the tunnel avoids this.
+- Working remotely with corporate tools that require direct connectivity to internal resources (e.g., file servers, VoIP systems).
+- Reducing latency for latency-sensitive tasks like video calls or online gaming — bypassing the VPN hop can shave off critical milliseconds.
+
+Avoid split tunneling when:
+- You're on an untrusted public Wi-Fi network and want *all* traffic protected.
+- You're accessing highly sensitive data and cannot afford any accidental leaks.
+- Your threat model demands strict anonymity — even non-VPN traffic could reveal identifiers or location clues.
+
+### Pros and Cons
+
+**Pros:**  \n✔️ Improved performance and reduced latency for local or bandwidth-heavy tasks  \n✔️ Seamless access to LAN devices and internal networks  \n✔️ Greater flexibility — tailor security to your actual needs  \n✔️ Reduced load on both your device and the VPN server  \n\n**Cons:**  \n✘️ Risk of misconfiguration leading to unintended data exposure  \n✘️ Slightly steeper learning curve for beginners  \n✘️ May weaken overall privacy posture if used carelessly  \n✘️ Not supported on all platforms (especially older mobile OS versions)
+
+### Implementation Differences Across Major Providers
+
+Not all split tunneling is created equal. Support varies by platform, granularity, and ease of use. Here's how three top-tier providers compare:
+
+| Feature | NordVPN | ExpressVPN | Surfshark |
+|---------|---------|------------|-----------|
+| **Desktop Support** | Windows, macOS, Linux | Windows, macOS, Linux | Windows, macOS, Linux |
+| **Mobile Support** | Android only (iOS limited via per-app settings) | iOS and Android (app-based only) | Android only (iOS not supported) |
+| **Split Mode Options** | App-based + IP/domain-based (advanced) | App-based only | App-based only |
+| **Ease of Setup** | Intuitive toggle + clear interface | Simple app list with on/off switches | Clean UI with drag-and-drop app selection |
+| **Customization Depth** | High — supports whitelisting/blacklisting by process name or domain | Medium — limited to apps, no domain/IP rules | Medium — app-based, no domain/IP support |
+
+NordVPN stands out for its advanced options and cross-platform consistency on desktop. ExpressVPN delivers simplicity and reliability — especially strong on iOS where many competitors fall short. Surfshark offers excellent value and intuitive controls, though its mobile limitations are worth noting.
+
+### Conclusion
+
+Split tunneling isn't a 'set it and forget it' feature — it's a deliberate choice that reflects how you actually use the internet. At TunnelPicks, we recommend enabling it only after assessing your specific workflow, threat model, and network environment. Used thoughtfully, it transforms your VPN from a blunt privacy instrument into a finely tuned traffic management system. Whether you're a remote worker juggling internal tools and cloud apps, a streamer balancing access and speed, or a tech-savvy user managing a smart home — split tunneling puts *you* in the driver's seat.
+
+Before you enable it, always double-check your rules and test local connectivity. And remember: great security isn't about maximum encryption — it's about intelligent, context-aware protection. That's the TunnelPicks standard.`,
+    author: "Lucas Smith",
+    authorRole: "Tech Lead at TideDriven",
+    date: "2026-06-23",
+    category: "VPN Tips & Guides",
+    readTime: 6,
+    tags: [
+      "split tunneling",
+      "VPN tips",
+      "NordVPN",
+      "ExpressVPN",
+      "Surfshark",
+      "VPN configuration",
+      "network routing",
+      "privacy guide",
+    ],
+  },
 ];

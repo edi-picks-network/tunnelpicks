@@ -41,10 +41,10 @@ export default function Header() {
           </div>
           <div className="flex flex-col leading-tight">
             <span className="text-lg font-bold text-gray-900 group-hover:text-ocean-600 transition-colors">
-              TideDriven
+              Tunnel Picks
             </span>
             <span className="text-[10px] text-gray-400 font-medium tracking-wider uppercase">
-              Studio #27 · Tunnel Picks
+              VPN Reviews & Comparisons
             </span>
           </div>
         </Link>

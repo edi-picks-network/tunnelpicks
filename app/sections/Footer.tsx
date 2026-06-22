@@ -15,7 +15,7 @@ const FOOTER_LINKS: Record<string, FooterLink[]> = {
     { name: 'Browse Categories', href: '/#comparison' },
   ],
   Studio: [
-    { name: 'About TideDriven', href: '/about' },
+    { name: 'About Tunnel Picks', href: '/about' },
     { name: 'Our Team', href: '/about#team' },
     { name: 'Contact Us', href: '/contact' },
     { name: 'Blog', href: '/blog' },
@@ -52,12 +52,12 @@ export default function Footer() {
                 <Ship className="w-5 h-5 text-white" />
               </div>
               <div className="flex flex-col leading-tight">
-                <span className="text-lg font-bold text-gray-900">TideDriven</span>
+                <span className="text-lg font-bold text-gray-900">Tunnel Picks</span>
                 <span className="text-[10px] text-gray-400 font-medium tracking-wider uppercase">Studio #27</span>
               </div>
             </Link>
             <p className="text-sm text-gray-500 leading-relaxed mb-4">
-              Studio #27 of TideDriven — a Helsingborg-based cloud solutions collective.
+              Tunnel Picks — a VPN comparison platform based in Helsingborg, Sweden.
               We curate and compare VPN services with a focus on privacy, security,
               and real-world performance. Tunnel Picks is our VPN comparison project.
             </p>
@@ -94,7 +94,7 @@ export default function Footer() {
 
         <div className="pt-8 border-t border-ocean-100 flex flex-col md:flex-row items-center justify-between gap-4">
           <p className="text-sm text-gray-400">
-            &copy; {new Date().getFullYear()} TideDriven Studio #27 · Tunnel Picks. All rights reserved.
+            &copy; {new Date().getFullYear()} Tunnel Picks. All rights reserved.
           </p>
           <div className="flex items-center gap-6">
             <Link href="/privacy" className="text-sm text-gray-400 hover:text-ocean-600 transition-colors">

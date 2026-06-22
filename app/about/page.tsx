@@ -3,16 +3,16 @@ import Link from "next/link";
 import { Ship, Waves, Shield, Globe, Lock, Users, MapPin, Anchor, Cloud, Wind } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "About — TideDriven Studio #27",
+  title: "About — Tunnel Picks",
   description:
-    "TideDriven Studio #27 is a Helsingborg-based cloud solutions collective. We run Tunnel Picks, a VPN comparison platform built on real-world testing and privacy-first principles.",
+    "Tunnel Picks is a helsinki-based VPN comparison platform built on real-world testing and privacy-first principles.",
 };
 
 const TEAM = [
   {
     name: "Aubrey Clark",
     role: "CEO & Founder",
-    bio: "Former cloud infrastructure architect at Ericsson. Aubrey founded TideDriven to bring transparency to the VPN and cloud security space. She oversees all testing methodology and editorial direction.",
+    bio: "Former cloud infrastructure architect at Ericsson. Aubrey founded Tunnel Picks to bring transparency to the VPN and cloud security space. She oversees all testing methodology and editorial direction.",
     initials: "AC",
   },
   {
@@ -65,7 +65,7 @@ export default function AboutPage() {
           <div className="flex items-center justify-center gap-2 mb-5">
             <div className="flex items-center gap-2 px-3 py-1.5 rounded-full bg-ocean-50 border border-ocean-100">
               <Ship className="w-3.5 h-3.5 text-ocean-500" />
-              <span className="text-xs font-medium text-ocean-700">TideDriven Studio #27</span>
+              <span className="text-xs font-medium text-ocean-700">Tunnel Picks</span>
             </div>
             <div className="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-sand-light border border-amber-100">
               <MapPin className="w-3 h-3 text-amber-500" />
@@ -76,7 +76,7 @@ export default function AboutPage() {
           <h1 className="text-3xl md:text-5xl font-bold text-gray-900 text-center leading-tight mb-6">
             We Are{" "}
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-ocean-500 to-ocean-700">
-              TideDriven
+              Tunnel Picks
             </span>
           </h1>
           <p className="text-lg text-gray-500 text-center leading-relaxed max-w-2xl mx-auto mb-8">
@@ -113,7 +113,7 @@ export default function AboutPage() {
 
           <div className="space-y-6 text-gray-600 leading-relaxed text-[15px]">
             <p>
-              <strong className="text-gray-900">TideDriven started on the docks of Helsingborg.</strong>{" "}
+              <strong className="text-gray-900">Tunnel Picks started on the docks of Helsingborg.</strong>{" "}
               Our founder, Aubrey Clark, spent years designing cloud infrastructure at Ericsson.
               She noticed a pattern: the same companies that built secure enterprise networks
               were struggling to recommend consumer VPNs to friends and family. The market was
@@ -139,7 +139,7 @@ export default function AboutPage() {
                 <div>
                   <p className="text-gray-700 text-sm font-medium mb-1">From the founder</p>
                   <p className="text-gray-500 text-sm italic leading-relaxed">
-                    "The name TideDriven reflects our philosophy. Like the tides, the VPN
+                    "The name Tunnel Picks reflects our philosophy. Like the tides, the VPN
                     landscape is constantly shifting — new protocols, new providers, new threats.
                     We stay driven by the tide of real data, not marketing currents. Our mission
                     is simple: make privacy accessible by making VPN choices clear."
@@ -150,7 +150,7 @@ export default function AboutPage() {
                     </div>
                     <div>
                       <p className="text-xs font-medium text-gray-900">Aubrey Clark</p>
-                      <p className="text-[10px] text-gray-400">CEO, TideDriven</p>
+                      <p className="text-[10px] text-gray-400">CEO, Tunnel Picks</p>
                     </div>
                   </div>
                 </div>

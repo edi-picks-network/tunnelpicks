@@ -16,6 +16,7 @@ const BLOG_SLUGS = [
   "choosing-right-vpn-protocol-2026-wireguard-openvpn-ikev2-lightway",
   "enterprise-vpn-selection-guide-20260620",
   "burp-suite-vs-open-source-web-security-testing-2026",
+  "enterprise-vpn-vs-consumer-vpn-2026",
 ] as const;
 
 const TOOL_SLUGS = [

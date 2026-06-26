@@ -17,6 +17,11 @@ const BLOG_SLUGS = [
   "enterprise-vpn-selection-guide-20260620",
   "burp-suite-vs-open-source-web-security-testing-2026",
   "enterprise-vpn-vs-consumer-vpn-2026",
+  "socks5-vs-http-proxies-2026",
+  "split-tunneling-explained-when-and-why",
+  "ssh-tunneling-2026-remote-access-port-forwarding",
+  "wireguard-mesh-networking-remote-teams-2026",
+  "dns-leak-testing-prevention-2026",
 ] as const;
 
 const TOOL_SLUGS = [

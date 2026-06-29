@@ -772,7 +772,7 @@ export const ALL_TOOLS: ToolData[] = [
       "Ad and tracker blocking",
       "24/7 live chat support"
     ],
-    useCase: "- 经常出差或旅行的用户，需要在酒店WiFi上安全访问流媒体内容，Hydra protocol的TCP加速在不稳定网络下表现优异\n- 轻度VPN用户，希望免费套餐满足日常浏览和社交媒体访问需求，可接受每日500MB限制\n- 对速度要求高的游戏玩家和视频直播用户，Hydra protocol的低延迟特性能够减少游戏卡顿",
+useCase: "- Frequent travelers who need to securely access streaming content on hotel Wi-Fi -- Hydra protocol's TCP acceleration excels on unstable networks\n- Light VPN users who want a free plan for everyday browsing and social media, comfortable with the 500MB daily cap\n- Gamers and live streamers requiring low latency -- Hydra protocol reduces lag and stuttering",
     websiteUrl: "https://hotspotshield.com",
     alternatives: [
         "ipvanish-consumer",

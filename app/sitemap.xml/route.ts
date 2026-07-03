@@ -27,6 +27,8 @@ const BLOG_SLUGS = [
   "site-to-site-vpn-vs-remote-access-vpn-2026-architecture-guide",
   "how-to-choose-best-vpn-remote-work-2026",
   "mullvad-vs-protonvpn-2026-privacy-focused-showdown",
+  "ztna-vs-traditional-vpn-migration-guide-2026",
+  "sase-vs-vpn-2026-enterprise-architecture-showdown",
 ] as const;
 
 const TOOL_SLUGS = [

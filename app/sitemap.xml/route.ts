@@ -29,6 +29,7 @@ const BLOG_SLUGS = [
   "mullvad-vs-protonvpn-2026-privacy-focused-showdown",
   "ztna-vs-traditional-vpn-migration-guide-2026",
   "sase-vs-vpn-2026-enterprise-architecture-showdown",
+  "best-vpn-routers-home-office-2026",
 ] as const;
 
 const TOOL_SLUGS = [

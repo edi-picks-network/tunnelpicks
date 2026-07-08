@@ -2,10 +2,10 @@ import { MetadataRoute } from "next";
 
 const BLOG_SLUGS = [
   "nordvpn-vs-expressvpn-vs-surfshark-2026-comparison",
-    "vpn-protocols-2026-wireguard-openvpn-ikev2",
-    "hidden-cost-free-vpns-2026",
-    "best-vpn-tunneling-proxy-services-2026-comparison",
-    "nordvpn-vs-mullvad-vs-pia-2026",
+  "vpn-protocols-2026-wireguard-openvpn-ikev2",
+  "hidden-cost-free-vpns-2026",
+  "best-vpn-tunneling-proxy-services-2026-comparison",
+  "nordvpn-vs-mullvad-vs-pia-2026",
   "enterprise-vpn-solutions-remote-teams-2026",
   "wireguard-vs-openvpn-vs-ipsec-2026-benchmark",
   "secure-remote-access-vpn-ztna-swg-2026",
@@ -15,12 +15,12 @@ const BLOG_SLUGS = [
   "wireguard-mesh-networking-2026-practical-guide",
   "choosing-right-vpn-protocol-2026-wireguard-openvpn-ikev2-lightway",
   "enterprise-vpn-selection-guide-2026",
+  "wireguard-mesh-networking-remote-teams-2026",
   "burp-suite-vs-open-source-web-security-testing-2026",
+  "split-tunneling-explained-when-and-why",
   "enterprise-vpn-vs-consumer-vpn-2026",
   "socks5-vs-http-proxies-2026",
-  "split-tunneling-explained-when-and-why",
   "ssh-tunneling-2026-remote-access-port-forwarding",
-  "wireguard-mesh-networking-remote-teams-2026",
   "dns-leak-testing-prevention-2026",
   "socks5-vs-http-proxy-2026-comparison",
   "best-vpn-streaming-2026-netflix-bbc-iplayer-disney",
@@ -29,7 +29,11 @@ const BLOG_SLUGS = [
   "mullvad-vs-protonvpn-2026-privacy-focused-showdown",
   "ztna-vs-traditional-vpn-migration-guide-2026",
   "sase-vs-vpn-2026-enterprise-architecture-showdown",
+  "ai-powered-vpns-adaptive-tunneling-2026",
+  "split-tunnel-vpn-configuration-optimization-2026",
+  "understanding-vpn-latency-causes-and-solutions",
   "best-vpn-routers-home-office-2026",
+  "vpn-kill-switch-testing-guide-2026",
 ] as const;
 
 const TOOL_SLUGS = [

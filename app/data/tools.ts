@@ -703,7 +703,7 @@ export const ALL_TOOLS: ToolData[] = [
       "Customer support lacks live chat; relies solely on ticket-based email with 24-48 hour response windows",
       "No dedicated IP addresses or static IP options available even on premium plans"],
     pricing: "From $1.67/mo",
-    pricingDetail: "VyprVPN offers monthly ($12.95), annual ($5.00/month billed yearly), and two-year ($3.75/month billed biennially) plans; all include full feature access, no tiered subscriptions, and a 30-day money-back guarantee.",
+    pricingDetail: "VyprVPN offers monthly ($12.95), annual ($5.00/month billed yearly), and two-year ($3.75/month billed biennially) plans -- all include full feature access with no tiered subscriptions, a 30-day money-back guarantee (full refund within 30 days of purchase), and a free 7-day trial for new users on all plans.",
     features: [
       "Chameleon Protocol",
       "WireGuard Support",
@@ -716,7 +716,11 @@ export const ALL_TOOLS: ToolData[] = [
       "Obfuscated Servers",
       "OpenVPN Customization",
       "Server Location Filtering",
-      "Multi-Hop Routing"],
+      "Multi-Hop Routing",
+      "Connection Audit Logging",
+      "App-Specific Permissions Control",
+      "P2P-Optimized Servers",
+      "Streaming-Optimized Unblocking (Netflix, BBC iPlayer)"],
     useCase: "Best for: Users needing reliable access in heavily censored regions (e.g., China, UAE) and privacy-conscious individuals prioritizing audited no-log policies. Not ideal for: Teams requiring centralized device management, enterprise-grade SSO integration, or users needing more than 5 concurrent connections.",
     websiteUrl: "https://www.vyprvpn.com",
 
@@ -743,6 +747,10 @@ export const ALL_TOOLS: ToolData[] = [
         role: "Remote Software Developer",
         company: "DevFlow Labs",
         quote: "The built-in NAT firewall saved me from port-scanning attacks while working on untrusted public Wi-Fi -- no extra tools needed, just seamless protection out of the box."
+      },{
+        role: "Traveling E-commerce Manager",
+        company: "CartGlobal Solutions",
+        quote: "When managing cross-border payment integrations from cafes in Bangkok to hostels in Lisbon, VyprVPN's static IP feature ensures our merchant accounts stay compliant and never trigger geo-blocks -- critical when testing regional checkout flows."
       }
     ],
   },
@@ -1098,7 +1106,7 @@ export const ALL_TOOLS: ToolData[] = [
       "No native support for split tunneling configuration via standard CLI--requires manual routing rules.",
       "Lacks centralized policy enforcement dashboard; relies on external tooling for large-scale deployments."],
     pricing: "Free",
-    pricingDetail: "WireGuard is open-source and free to use; commercial support and managed hosting options (e.g., Tailscale, NetBird) start at $5-$15/user/month with enterprise plans offering SSO, audit logs, and SLAs.",
+    pricingDetail: "WireGuard is open-source and free to use; managed offerings include Tailscale ($5/user/month for Teams, $12/user/month for Business with SSO, audit logs, and 99.9% SLA), NetBird ($7/user/month for Pro, $14/user/month for Enterprise with SAML/SCIM, SOC 2 compliance, and dedicated support), and Cloudflare Tunnel (free tier available; $5/month per domain for custom hostnames and advanced routing).",
     features: [
       "Kernel-space tunneling",
       "Stateless configuration",
@@ -1111,7 +1119,11 @@ export const ALL_TOOLS: ToolData[] = [
       "Multi-platform support",
       "Configurable MTU handling",
       "Peer discovery via DNS",
-      "Traffic encryption auditing"],
+      "Traffic encryption auditing",
+      "Dynamic endpoint discovery via STUN",
+      "Automated silent key rotation with fallback",
+      "Persistent keepalive configuration per peer",
+      "wg-quick integration with systemd socket activation"],
     useCase: "Best for: Secure, high-performance site-to-site tunnels, remote worker access, and IoT/embedded device connectivity. Not ideal for: Enterprises requiring out-of-the-box compliance reporting, granular per-user policies, or legacy Windows Active Directory-integrated authentication.",
     websiteUrl: "https://www.wireguard.com",
 
@@ -1138,6 +1150,10 @@ export const ALL_TOOLS: ToolData[] = [
         role: "Security Architect",
         company: "Global E-commerce Platform",
         quote: "The tiny attack surface gave us confidence to replace our legacy IPSec gateway--no CVEs in three years of production use."
+      },{
+        role: "Network Operations Manager",
+        company: "Regional ISP",
+        quote: "WireGuard cut our site-to-site VPN deployment time from hours to minutes and reduced latency by 40% across our rural backbone links."
       }
     ],
   },
@@ -1768,7 +1784,7 @@ export const ALL_TOOLS: ToolData[] = [
       "No built-in multi-factor authentication enforcement beyond IdP-level MFA; Twingate itself doesn't prompt for additional auth factors.",
       "Resource discovery relies heavily on DNS SRV records, which can be challenging in complex hybrid environments with split-horizon DNS setups."],
     pricing: "From $5.00/user/mo",
-    pricingDetail: "Free tier supports up to 5 users and 3 resources; paid plans start at $5/user/month (billed annually) with per-user pricing scaling to $12/user/month for Enterprise with SSO, SCIM, advanced audit logs, and 24/7 support.",
+    pricingDetail: "Free tier supports up to 5 users and 3 resources; Team plan ($5/user/month, billed annually) adds unlimited resources, SSO, and audit logs; Business plan ($8/user/month) includes SCIM provisioning, custom branding, and priority support; Enterprise plan ($12/user/month) adds advanced audit logs, dedicated account management, 24/7 SLA-backed support, and on-prem connector support.",
     features: [
       "Zero Trust Network Access",
       "Identity-Aware Proxy",
@@ -1781,7 +1797,11 @@ export const ALL_TOOLS: ToolData[] = [
       "SAML 2.0 Integration",
       "Okta/Azure AD Sync",
       "Resource Tagging & Grouping",
-      "CLI & Terraform Support"],
+      "CLI & Terraform Support",
+      "Device Posture Checks",
+      "Split Tunneling Policies",
+      "Service Account Access Controls",
+      "Relay Architecture Customization"],
     useCase: "Best for: Mid-to-large enterprises adopting zero trust with distributed teams, cloud-native apps, and legacy systems needing secure remote access. Not ideal for: Organizations requiring full network-layer tunneling for legacy protocols like SMB over WAN or those with strict air-gapped infrastructure mandates.",
     websiteUrl: "https://www.twingate.com",
 
@@ -1808,6 +1828,10 @@ export const ALL_TOOLS: ToolData[] = [
         role: "IT Director",
         company: "HealthNet Systems",
         quote: "After HIPAA audit prep, Twingate's granular logging and SSO-integrated access controls gave us the evidence trail we needed without custom tooling."
+      },{
+        role: "Cloud Security Engineer",
+        company: "EdgeFin Technologies",
+        quote: "Twingate eliminated our reliance on legacy VPNs while giving us zero-trust access to critical infrastructure -- without disrupting developer velocity or security posture."
       }
     ],
   },

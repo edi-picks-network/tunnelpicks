@@ -34,6 +34,9 @@ const BLOG_SLUGS = [
   "understanding-vpn-latency-causes-and-solutions",
   "best-vpn-routers-home-office-2026",
   "vpn-kill-switch-testing-guide-2026",
+  "enterprise-vpn-security-architecture-best-practices-2026",
+  "proxy-chaining-multihop-vpn-architectures-2026",
+  "wireguard-openvpn-ipsec-performance-benchmark-2026",
 ] as const;
 
 const TOOL_SLUGS = [

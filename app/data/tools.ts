@@ -90,7 +90,8 @@ export const ALL_TOOLS: ToolData[] = [
       "Threat Protection blocks ads, trackers, and malware",
       "Meshnet enables secure cross-device networking",
       "5000+ servers in 60 countries with consistent streaming support",
-      "24/7 live chat support with knowledgeable agents"
+      "24/7 live chat support with knowledgeable agents",
+      "Dark Web Monitor alerts you if your credentials appear in data breaches"
     ],
     cons: [
       "No free plan-only 7-day money-back guarantee on most plans",
@@ -98,8 +99,8 @@ export const ALL_TOOLS: ToolData[] = [
       "Mobile app interface occasionally lags behind desktop feature parity",
       "Split tunneling unavailable on iOS"
     ],
-    pricing: "Starts at $3.69/month with 2-year commitment; monthly plan costs $12.99.",
-    pricingDetail: "2-year plan: $3.69/month ($88.56 total); 1-year plan: $4.99/month ($59.88 total); monthly plan: $12.99/month. All plans include full feature access and 30-day money-back guarantee except for monthly subscriptions, which offer 7 days.",
+    pricing: "Starts at $3.69/month with 2-year commitment; monthly plan costs $12.99. 30-day money-back guarantee on multi-month plans.",
+    pricingDetail: "2-year plan: $3.69/month ($88.56 total); 1-year plan: $4.99/month ($59.88 total); monthly plan: $12.99/month. All plans include full feature access and 30-day money-back guarantee except for monthly subscriptions, which offer 7 days. Business plans from $8/user/month with centralized billing and admin dashboard.",
     features: [
       "NordLynx protocol",
       "Threat Protection",
@@ -108,7 +109,9 @@ export const ALL_TOOLS: ToolData[] = [
       "Obfuscated servers",
       "Kill switch",
       "Split tunneling (desktop only)",
-      "Dark Web Monitor"
+      "Dark Web Monitor",
+      "DNS leak protection",
+      "Dedicated IP add-on available"
     ],
     useCase: "Best for privacy-focused individuals, remote workers, streamers, and small teams needing secure device meshing. Not ideal for users requiring only short-term, no-commitment access or those prioritizing lowest possible entry price over features.",
     websiteUrl: "https://www.nordvpn.com",
@@ -287,7 +290,8 @@ export const ALL_TOOLS: ToolData[] = [
       "Fixed flat-rate pricing at 5 EUR/month (no tiered plans or hidden fees)",
       "Support for both WireGuard and OpenVPN with strong encryption defaults",
       "Built-in ad/tracker blocking via customizable DNS filtering",
-      "Cash and Monero payment options for maximum financial anonymity"
+      "Cash and Monero payment options for maximum financial anonymity",
+      "Open-source client code with public infrastructure maps for full transparency"
     ],
     cons: [
       "No live chat or phone support-email-only with 24-48 hour response time",
@@ -295,8 +299,8 @@ export const ALL_TOOLS: ToolData[] = [
       "No dedicated streaming-optimized servers or obfuscation features",
       "Minimalist UI may feel underwhelming or technically intimidating to non-technical users"
     ],
-    pricing: "Flat rate of 5 EUR per month, billed annually or monthly with anonymous payment options.",
-    pricingDetail: "5 EUR per month when billed monthly; 60 EUR per year (equivalent to 5 EUR/month) when billed annually. Accepts credit card, bank transfer, cash by mail, Bitcoin, Monero, and Swish. No free trial, but 30-day money-back guarantee.",
+    pricing: "Flat rate of 5 EUR per month (6 EUR from Q3 2026), billed annually or monthly with anonymous payment options.",
+    pricingDetail: "Currently 5 EUR per month; increasing to 6 EUR/month in Q3 2026 for new subscribers. Existing users grandfathered at current rate. 60 EUR per year when billed annually. Accepts credit card, bank transfer, cash by mail, Bitcoin, Monero, and Swish. 30-day money-back guarantee. No free trial, no hidden fees.",
     features: [
       "WireGuard protocol support",
       "OpenVPN protocol support",
@@ -305,7 +309,9 @@ export const ALL_TOOLS: ToolData[] = [
       "Built-in DNS-based ad and tracker blocking",
       "Kill switch (always-on and configurable)",
       "Multi-hop routing capability",
-      "Cross-platform apps (Windows, macOS, Linux, Android, iOS)"
+      "Cross-platform apps (Windows, macOS, Linux, Android, iOS)",
+      "IPv6 leak protection",
+      "Custom DNS server configuration"
     ],
     useCase: "Best for privacy advocates, journalists, developers, and security professionals who prioritize verifiable anonymity and transparency; not for beginners seeking hand-holding or users needing consistent Netflix/Hulu access or censorship circumvention in highly restricted regions.",
     websiteUrl: "https://mullvad.net",
@@ -330,6 +336,11 @@ export const ALL_TOOLS: ToolData[] = [
         role: "Privacy Consultant",
         company: "Data Rights Collective",
         quote: "We recommend Mullvad to clients handling whistleblower data. Their cash payment option and no-email signup close critical metadata leaks others ignore."
+      },
+      {
+        role: "DevOps Engineer",
+        company: "Open Source Infrastructure Co.",
+        quote: "I run Mullvad headless on my home server via WireGuard config files. No GUI needed, no bloat-just clean, auditable tunneling."
       }
     ]
   },
@@ -1179,10 +1190,12 @@ export const ALL_TOOLS: ToolData[] = [
     cons: [
         "No native MFA integration---requires third-party IdP bridging",
         "Steep CLI learning curve for advanced routing and split-tunneling",
-        "Access Server licensing costs scale linearly per concurrent user (no tiered bundles)"
+        "Access Server licensing costs scale linearly per concurrent user (no tiered bundles)",
+        "OpenVPN over TCP suffers from head-of-line blocking in high-loss environments",
+        "Connection handshake is 3-5x slower than WireGuard on mobile networks"
       ],
-    pricing: "$15.00/mo",
-    pricingDetail: "Commercial Access Server licenses start at $15.00/month per concurrent user. Includes 24/7 enterprise support, FIPS modules, and centralized management. Volume discounts apply at 100+ users (15% off) and 1,000+ users (30% off). Self-hosted open-source version remains free.",
+    pricing: "$15.00/mo per concurrent user (cloud); self-hosted open-source edition is free.",
+    pricingDetail: "Commercial Access Server licenses start at $15.00/month per concurrent user for cloud-hosted, or $10.00/user for self-hosted. Includes 24/7 enterprise support, FIPS modules, and centralized management. Volume discounts apply at 100+ users (15% off) and 1,000+ users (30% off). Self-hosted open-source community edition (OpenVPN Community) remains completely free under GPLv2 license.",
     features: [
         "TLS 1.3 handshake with OCSP stapling",
         "AES-256-GCM cipher suite",

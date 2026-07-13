@@ -38,6 +38,7 @@ const BLOG_SLUGS = [
   "proxy-chaining-multihop-vpn-architectures-2026",
   "wireguard-openvpn-ipsec-performance-benchmark-2026",
   "multi-cloud-vpn-interconnect-architecture-2026",
+  "vpn-audit-log-compliance-2026",
 ] as const;
 
 const TOOL_SLUGS = [

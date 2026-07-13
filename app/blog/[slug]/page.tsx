@@ -20,7 +20,7 @@ export async function generateMetadata({
   const post = BLOG_POSTS.find((p) => p.slug === slug);
   if (!post) return { title: "Post Not Found" };
   return {
-    title: `${post.title} — VPN Compare Hub`,
+    title: `${post.title} — Tunnel Picks`,
     description: post.excerpt,
   };
 }
@@ -166,11 +166,11 @@ export default async function BlogPostPage({
     post.title,
     post.author,
     post.date,
-    'VPN Compare Hub',
+    'Tunnel Picks',
     post.excerpt
   );
   const orgJsonLd = organizationSchema(
-    'VPN Compare Hub',
+    'Tunnel Picks',
     'https://tunnelpicks.net',
     'Comprehensive VPN service comparison hub for modern businesses.'
   );

@@ -4,7 +4,7 @@ import { BLOG_POSTS } from "@/data/blog-posts";
 import { Calendar, Clock, User, ArrowRight } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Blog — VPN Compare Hub",
+  title: "Blog — Tunnel Picks",
   description:
     "Expert insights, comparisons, and reviews of VPN services, privacy tools, and security protocols. Stay informed with the latest in online privacy technology.",
 };

@@ -64,7 +64,7 @@ export default function ToolDetailPage() {
     scripts.push(s1);
 
     const org = organizationSchema(
-      'VPN Compare Hub',
+      'Tunnel Picks',
       'https://tunnelpicks.net',
       'Comprehensive VPN service comparison hub for modern businesses.'
     );

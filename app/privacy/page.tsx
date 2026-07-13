@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Privacy Policy — VPN Compare Hub",
+  title: "Privacy Policy — Tunnel Picks",
   description:
     "Learn how Tunnel Picks collects, uses, and protects your personal data. Our privacy policy outlines our commitment to your privacy and data security.",
 };

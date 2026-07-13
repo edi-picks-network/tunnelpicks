@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Affiliate Disclosure — VPN Compare Hub",
+  title: "Affiliate Disclosure — Tunnel Picks",
   description:
-    "VPN Compare Hub's affiliate disclosure policy. Learn how we may earn commissions through partner links on our site.",
+    "Tunnel Picks's affiliate disclosure policy. Learn how we may earn commissions through partner links on our site.",
 };
 
 export default function DisclosurePage() {
@@ -26,7 +26,7 @@ export default function DisclosurePage() {
           <section>
             <h2 className="text-xl font-bold text-[#F0F4F8] mb-3">Transparency First</h2>
             <p>
-              VPN Compare Hub is committed to transparency. This Affiliate Disclosure
+              Tunnel Picks is committed to transparency. This Affiliate Disclosure
               explains how we may earn compensation through links on our website.
             </p>
           </section>
@@ -34,7 +34,7 @@ export default function DisclosurePage() {
           <section>
             <h2 className="text-xl font-bold text-[#F0F4F8] mb-3">Affiliate Links</h2>
             <p>
-              Some of the links on VPN Compare Hub are affiliate links. This means that
+              Some of the links on Tunnel Picks are affiliate links. This means that
               if you click on a link and make a purchase or sign up for a service, we may
               receive a commission at no additional cost to you.
             </p>

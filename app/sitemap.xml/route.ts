@@ -39,6 +39,7 @@ const BLOG_SLUGS = [
   "wireguard-openvpn-ipsec-performance-benchmark-2026",
   "multi-cloud-vpn-interconnect-architecture-2026",
   "vpn-audit-log-compliance-2026",
+  "sd-wan-vs-vpn-2026-enterprise-connectivity-showdown",
 ] as const;
 
 const TOOL_SLUGS = [

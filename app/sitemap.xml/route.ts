@@ -40,6 +40,7 @@ const BLOG_SLUGS = [
   "multi-cloud-vpn-interconnect-architecture-2026",
   "vpn-audit-log-compliance-2026",
   "sd-wan-vs-vpn-2026-enterprise-connectivity-showdown",
+  "ipsec-vs-wireguard-the-2026-enterprise-tunneling-protocol-decision-guide-2026",
 ] as const;
 
 const TOOL_SLUGS = [

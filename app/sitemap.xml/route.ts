@@ -41,6 +41,8 @@ const BLOG_SLUGS = [
   "vpn-audit-log-compliance-2026",
   "sd-wan-vs-vpn-2026-enterprise-connectivity-showdown",
   "ipsec-vs-wireguard-the-2026-enterprise-tunneling-protocol-decision-guide-2026",
+  "wireguard-vs-openvpn-2026-comparison",
+  "best-vpns-remote-work-2026-productivity-security",
 ] as const;
 
 const TOOL_SLUGS = [

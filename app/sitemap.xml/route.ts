@@ -43,6 +43,7 @@ const BLOG_SLUGS = [
   "ipsec-vs-wireguard-the-2026-enterprise-tunneling-protocol-decision-guide-2026",
   "wireguard-vs-openvpn-2026-comparison",
   "best-vpns-remote-work-2026-productivity-security",
+  "post-quantum-vpn-tunneling-2026-cryptography-migration",
 ] as const;
 
 const TOOL_SLUGS = [

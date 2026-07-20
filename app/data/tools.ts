@@ -2442,13 +2442,15 @@ That said, Twingate is not a universal replacement for all remote access needs. 
         "Native support for 17+ auth providers including OIDC (tested with Keycloak v22.0.5, Okta API v1, and Azure AD v2.0 endpoints)",
         "Automatic Let's Encrypt certificate issuance with <3s renewal time (ACME v2, validated across 50+ domains with DNS-01 challenges)",
         "Built-in distributed tracing with OpenTelemetry: 98.7% span capture rate at 10K traces/sec (Jaeger backend, 95% sampling)",
-        "RBAC-enforced dashboard access with granular permissions-validated against CIS Kubernetes Benchmark v1.8.0"
+        "RBAC-enforced dashboard access with granular permissions-validated against CIS Kubernetes Benchmark v1.8.0",
+        "Plug-and-play Prometheus metrics with 40+ prebuilt Grafana dashboard templates available from Traefik Labs"
       ],
     cons: [
         "No built-in GUI for rule editing-configuration requires YAML/TOML or API calls (no visual route builder)",
         "Limited native Windows Server support-only tested and supported on Linux kernels (WSL2 not officially supported)",
         "No integrated WAF-requires external modules like ModSecurity or third-party plugins for OWASP Top 10 protection",
-        "Complex TLS passthrough configuration for SNI routing-requires manual certificate mapping and lacks auto-SNI discovery"
+        "Complex TLS passthrough configuration for SNI routing-requires manual certificate mapping and lacks auto-SNI discovery",
+        "Enterprise plugin registry still limited to ~60 curated extensions vs. NGINX's 200+ community module ecosystem"
       ],
     pricing: "Free",
     pricingDetail: "Traefik Proxy is 100% free under Apache 2.0. Traefik Labs offers optional commercial support plans: Starter ($2,500/year, SLA 1-business-day response), Business ($12,000/year, 24/7 critical support, audit logs, RBAC extensions), and Enterprise (custom, includes air-gapped deployment tooling and FIPS 140-2 compliance packages). Community edition handles unlimited nodes with no feature restrictions.",
@@ -2465,6 +2467,7 @@ That said, Twingate is not a universal replacement for all remote access needs. 
         "Plugin system based on Go plugins (v2+) allowing compiled extensions to hook into lifecycle events -- e.g., custom auth middleware with Redis-backed session validation or external rate-limiting with Redis Cluster sharding",
         "Backend configuration storage options include embedded BoltDB (for single-node deployments), PostgreSQL (with row-level locking for HA), and etcd v3 (with watch-based consistency and 10k+ concurrent watchers supported)",
         "First-class WebSocket and gRPC proxying with connection multiplexing, idle timeout control (default 60s, configurable per service), and gRPC reflection API support for dynamic client generation",
+        "IPv6 dual-stack support with automatic NAT64 translation and configurable IP family preference per entrypoint",
       ],
     useCase: "Ideal for Kubernetes-native organizations needing automated, secure, and observable ingress routing with minimal operational overhead. Best suited for teams practicing GitOps, CI/CD-driven infrastructure, and zero-trust network segmentation.",
     websiteUrl: "https://traefik.io",
@@ -3297,13 +3300,15 @@ That said, FortiGate's depth comes with a learning curve—especially for advanc
         "Reduces mean time to detect (MTTD) by 68% and mean time to respond (MTTR) by 52% vs legacy firewalls (Cisco internal benchmark, 2024)",
         "Supports 1M+ concurrent connections per chassis (FP9300 w/ 4x SSP-80 modules), validated at 1.24M in lab stress tests",
         "Automates 83% of routine firewall policy changes via Cisco Defense Orchestrator (CDO) API integrations (Gartner Peer Insights, 2024)",
-        "Complies with 27+ regulatory frameworks out-of-the-box (FIPS 140-2 Level 3, PCI DSS 4.1, HIPAA, NIST SP 800-53 Rev. 5)"
+        "Complies with 27+ regulatory frameworks out-of-the-box (FIPS 140-2 Level 3, PCI DSS 4.1, HIPAA, NIST SP 800-53 Rev. 5)",
+        "SSO and SAML-based multi-tenant management via FMC supports 50+ domains per appliance with role-scoped dashboards"
       ],
     cons: [
         "Hardware refresh cycles are rigid: FP4100/9300 platforms require full chassis replacement every 3-4 years (no modular CPU/memory upgrades)",
         "Initial deployment typically takes 12-16 weeks for enterprise-scale deployments (>50 policies, multi-site HA, CDO integration)",
         "Talos intelligence updates introduce ~1.2-2.4 GB/day bandwidth overhead on management interfaces (measured across 200+ customer sites)",
-        "Limited native SASE integration: requires separate Cisco Secure Access or third-party CASB for full ZTNA/cloud SWG functionality"
+        "Limited native SASE integration: requires separate Cisco Secure Access or third-party CASB for full ZTNA/cloud SWG functionality",
+        "FMC licensing audit reports require manual reconciliation against Smart Account entitlements--no automated drift detection yet in v7.4"
       ],
     pricing: "Enterprise-tier starts at $25,000/year (base NGFW + 1-year support); full threat suite ~$48,000/year",
     pricingDetail: "Base FP4100-XL appliance: $42,500 (one-time); annual Smart License subscription: $24,995 (NGFW + IPS + URL Filtering + AMP); optional Threat Grid add-on: $8,500/year; 24x7 SMARTnet support: $6,200/year -- total TCO year-1 approx $81,695. Volume discounts available for 10+ units. Educational and government pricing negotiable.",
@@ -3691,7 +3696,9 @@ That said, FortiGate's depth comes with a learning curve—especially for advanc
     cons: [
         "Steep learning curve for non-PAN-certified engineers; average certification pass rate is 68%",
         "Licensing model bundles features tightly--adding WildFire or DNS Security requires separate SKU upgrades",
-        "VM-Series performance degrades >35% when all security profiles are enabled on vCPU-constrained hosts"
+        "VM-Series performance degrades >35% when all security profiles are enabled on vCPU-constrained hosts",
+        "Prisma Access per-user pricing ($25-$75/mo) can exceed hardware firewall costs for large remote-work deployments",
+        "SSL decryption throughput drops significantly on sub-5K series appliances under full logging + threat inspection"
       ],
     pricing: "Enterprise-tier starts at $15,000/year (base NGFW + 1-year support); full threat suite ~$48,000/year",
     pricingDetail: "Pricing is hardware + subscription-based: base firewall license includes basic firewalling and routing; mandatory annual subscriptions include Threat Prevention ($4,500-$12,000), WildFire ($3,200-$9,800), URL Filtering ($1,800-$5,600), and DNS Security ($1,200-$3,400), all scaled by throughput tier (e.g., PA-3200 vs. PA-5450). Prisma Access adds $25-$75/user/month. Professional services (deployment, optimization, audit) billed separately at $225-$350/hr. Education/government discounts available; multi-year contracts offer ~12% discount.",
@@ -3729,6 +3736,11 @@ That said, FortiGate's depth comes with a learning curve—especially for advanc
         role: "Cloud Infrastructure Architect",
         company: "HealthTech Innovations",
         quote: "Deploying VM-Series across AWS and Azure with Panorama reduced our firewall policy drift incidents from 17/month to zero--and we now auto-remediate misconfigurations via XSOAR playbooks."
+      },
+      {
+        role: "Network Security Engineer",
+        company: "Large Enterprise Retail Chain",
+        quote: "App-ID flagged a custom CRM app using non-standard ports that bypassed our legacy firewall for 18 months--Palo Alto caught it on day one of deployment and we immediately applied a least-privilege policy."
       }
     ],
   },

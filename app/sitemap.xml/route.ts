@@ -45,7 +45,9 @@ const BLOG_SLUGS = [
   "best-vpns-remote-work-2026-productivity-security",
   "post-quantum-vpn-tunneling-2026-cryptography-migration",
 
-  "diy-privacy-gateway-wireguard-pihole-privoxy-2026",] as const;
+  "diy-privacy-gateway-wireguard-pihole-privoxy-2026",
+  "enterprise-tunnel-encapsulation-vxlan-gre-ipsec-wireguard-2026",
+] as const;
 
 const TOOL_SLUGS = [
   "nordvpn",

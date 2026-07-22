@@ -48,6 +48,7 @@ const BLOG_SLUGS = [
   "diy-privacy-gateway-wireguard-pihole-privoxy-2026",
   "enterprise-tunnel-encapsulation-vxlan-gre-ipsec-wireguard-2026",
   "wireguard-vs-openvpn-vs-ipsec-2026-comprehensive-comparison",
+  "split-tunneling-2026-smart-traffic-routing-strategies",
 ] as const;
 
 const TOOL_SLUGS = [

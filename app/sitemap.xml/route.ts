@@ -49,6 +49,7 @@ const BLOG_SLUGS = [
   "enterprise-tunnel-encapsulation-vxlan-gre-ipsec-wireguard-2026",
   "wireguard-vs-openvpn-vs-ipsec-2026-comprehensive-comparison",
   "split-tunneling-2026-smart-traffic-routing-strategies",
+  "kubernetes-service-mesh-vpn-wireguard-istio-2026",
 ] as const;
 
 const TOOL_SLUGS = [

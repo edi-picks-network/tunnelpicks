@@ -1112,21 +1112,25 @@ export const ALL_TOOLS: ToolData[] = [
     icon: Zap,
     description: "Lightning-fast VPN protocol with modern cryptography and minimal codebase.",
     longDescription:
-        `WireGuard has continued to evolve, solidifying its position as a leading protocol for secure and efficient network connections. As of 2026, WireGuard is now widely adopted across various sectors, including finance, healthcare, and government, due to its robust security and performance. The latest version, WireGuard 1.2, introduced in early 2025, includes enhanced support for multi-path routing, which significantly improves reliability and performance over diverse network conditions. This feature, combined with the existing simplicity and efficiency, has made WireGuard a preferred choice for both small-scale and large-scale deployments. Notably, the protocol's minimalistic design, comprising less than 4,000 lines of code, continues to ensure high auditability and rapid patching, maintaining a strong security posture. Real-world use cases have demonstrated that WireGuard can handle up to 15 Gbps on modern x86 processors (AMD EPYC 9754) and 3.5 Gbps on ARM Cortex-A73 cores, outperforming traditional solutions like OpenVPN by up to 5-7x. A major global bank reported a 40% reduction in latency and a 300% increase in throughput after transitioning their remote access infrastructure to WireGuard, enhancing their overall operational efficiency and user experience.`,
+        "WireGuard is a modern, lightweight VPN protocol designed for simplicity, security, and high performance. Unlike traditional VPNs such as OpenVPN or IPsec, WireGuard operates primarily in kernel space—reducing context switches and overhead—while maintaining strict separation between cryptographic operations and network stack logic. Its cryptography suite is rigorously selected: ChaCha20-Poly1305 for authenticated encryption, Curve25519 for key exchange, BLAKE2s for hashing, and HKDF for key derivation—each chosen for speed, auditability, and resistance to side-channel attacks. The entire implementation spans approximately 4,000 lines of C code (Linux kernel module) and ~1,000 lines for userspace components, enabling deep auditability and rapid vulnerability assessment. WireGuard supports seamless roaming via source address detection and automatic handover across interfaces, along with built-in NAT traversal using UDP encapsulation and periodic keepalives. Multi-path routing is achievable through policy-based routing integration rather than native protocol support. Benchmarks show sustained throughput of up to 15 Gbps on modern x86-64 systems and around 3.5 Gbps on ARM64 platforms like the Raspberry Pi 4. Enterprise adoption has grown steadily, with deployments at cloud providers, SaaS infrastructure teams, and regulated industries leveraging its deterministic behavior and minimal attack surface—though it lacks native support for dynamic topology management or centralized configuration orchestration without third-party tooling.",
+    
     pros: [
-      "Kernel-space implementation delivers exceptional throughput: 15 Gbps on modern x86 processors (AMD EPYC 9754) and 3.5 Gbps on ARM Cortex-A73 cores, outperforming OpenVPN by 5-7x on identical hardware.",
-      "Minimal auditable codebase of approximately 4,000 lines enables rapid security reviews and faster vulnerability patching - zero critical CVEs in 6+ years of production use.",
-      "Enhanced multi-path routing in version 1.2 improves reliability and performance over diverse network conditions, reducing packet loss and improving connection stability.",
-      "Seamless NAT traversal via UDP hole-punching and persistent keepalive messages eliminates the need for port forwarding, static public IPs, or complex firewall rule configurations.",
-      "Built-in roaming support maintains VPN connections transparently across IP address changes, essential for mobile workers switching between WiFi, cellular, and tethered networks without tunnel re-establishment.",
-      "Cryptographic agility using modern primitives: ChaCha20-Poly1305 for authenticated encryption, Curve25519 for ECDH key exchange, BLAKE2s for hashing, and HKDF for key derivation - all resistant to known cryptanalytic attacks."
+        "Achieves up to 15 Gbps throughput on modern x86-64 hardware, significantly outperforming OpenVPN (typically < 1 Gbps) and IPsec (typically 2–4 Gbps) under equivalent conditions.",
+        "Kernel-space implementation reduces CPU overhead by ~30–50% compared to userspace TLS-based protocols, resulting in lower latency and higher connection density per core.",
+        "Cryptographic agility is enforced via hard-coded primitives—ChaCha20-Poly1305, Curve25519, BLAKE2s, and HKDF—eliminating negotiation vulnerabilities and reducing attack surface.",
+        "Roaming is handled natively through source address detection and automatic peer endpoint updates, enabling uninterrupted sessions during WiFi-to-cellular handoffs.",
+        "Minimal codebase (~4,000 lines in kernel) enables full auditability; independent security reviews have confirmed absence of known memory-safety flaws since initial 2017 release.",
+        "NAT traversal works reliably without STUN or TURN servers, relying solely on periodic UDP keepalives and stateless firewall-friendly design.",
+        "Supports policy-based multi-path routing via integration with Linux routing tables and ip-rule, allowing traffic splitting across multiple tunnels or interfaces."
     ],
+    
     cons: [
-      "No native built-in user management or role-based access control (RBAC) - every peer is equally privileged; enterprise deployments require wrapper tools like Firezone, Headscale, or NetBird for multi-tenant access control.",
-      "Limited logging and monitoring capabilities: kernel module emits only basic peer handshake events via debugfs; connection statistics, per-session bandwidth accounting, and audit trails require external tooling.",
-      "No native support for split tunneling via standard CLI configuration - implementing application-specific routing requires manual iptables/nftables rules, network namespaces, or policy routing tables.",
-      "Lacks a centralized policy enforcement dashboard - administrators must distribute config files out-of-band or use third-party orchestration for large-scale deployments exceeding 50 peers.",
-      "UDP-only transport can be blocked by restrictive firewalls or proxy servers that only allow TCP/443 - workarounds (e.g., wg-quick over tunnels, udp2raw) add complexity and reduce performance."],
+        "No built-in support for dynamic topology changes—adding or removing peers requires manual reconfiguration or external orchestration tools.",
+        "Lacks native support for certificate-based authentication; relies exclusively on pre-shared static public keys, complicating large-scale identity lifecycle management.",
+        "No standardized mechanism for revoking compromised keys—administrators must manually update configurations on all affected peers.",
+        "Limited native IPv6 mobility handling; some implementations exhibit inconsistent behavior when IPv6 addresses change during active sessions.",
+        "No integrated bandwidth shaping or QoS controls—traffic prioritization requires external tc or iptables rules."
+    ],
     pricing: "Free",
     pricingDetail: "WireGuard remains 100% open-source software licensed under GPLv2 and MIT, completely free to use with no licensing fees, subscription tiers, or usage caps. Managed WireGuard-as-a-Service offerings include: Tailscale (free for up to 5 users, Teams $7/user/month); NetBird (free for up to 10 users, Pro $8/user/month); Firezone (self-hosted free tier, Cloud-hosted from $15/user/month); Headscale (open-source Tailscale-compatible server, self-hosted free). Deploying WireGuard directly on a $5/month VPS provides unlimited users and bandwidth with full control.",
     features: [
@@ -1262,22 +1266,24 @@ export const ALL_TOOLS: ToolData[] = [
     icon: Shield,
     description: "Zero-config VPN built on WireGuard with mesh networking and SSO integration.",
     longDescription:
-      "Tailscale, a zero-config, WireGuard-based enterprise VPN, has solidified its position as a leader in secure, private networking for cloud infrastructure, remote teams, and hybrid environments. By 2026, Tailscale has expanded its user base to over 800,000 registered users and more than 15,000 active business customers, including major enterprises and startups. The platform continues to excel in developer-first workflows and infrastructure-as-code deployments, leveraging DERP relays and automatic NAT traversal to establish mesh networks in under 20 seconds per node. It supports fine-grained ACLs via declarative JSON policies, integrates natively with Terraform and Kubernetes (via Helm charts), and offers real-time audit logs. Enhanced security features include SSO (Okta, Azure AD, Google Workspace) and SCIM provisioning, along with a 99.99% uptime SLA. In 2025, Tailscale introduced a new feature, 'Secure Edge,' which allows for enhanced edge security and performance, reducing median peer-to-peer latency in North America to sub-50ms. This makes it an ideal solution for scaling engineering organizations that need secure access to internal APIs, databases, and CI/CD runners without exposing them to the public internet. Additionally, Tailscale's support for up to 20,000 nodes per tailnet in 2026 further enhances its scalability.",
-    pros: [
-        "Zero-config setup: installs and connects in <10 seconds via CLI or GUI; no firewall port forwarding required",
-        "Built-in identity-aware access controls using SSO groups--e.g., 'devs-can-access-staging-db' ACLs enforced at wire level",
-        "Native Kubernetes integration: Tailscale operator deploys as DaemonSet and auto-registers pods with DNS names like 'postgres.staging.beta'",
-        "Real-time network map visualization showing live node status, latency, and relay paths (DERP or direct)",
-        "Automatic key rotation every 24 hours with forward secrecy--no manual certificate renewal",
-        "Support for exit nodes with split tunneling: allows routing only specific traffic (e.g., corporate SaaS) through company gateway",
-        "Enhanced 'Secure Edge' feature reduces median peer-to-peer latency to sub-50ms in North America"
+      "Tailscale is a modern, WireGuard-based zero-config mesh VPN designed for secure, scalable network connectivity across distributed infrastructure. It eliminates traditional VPN complexity by automatically configuring encrypted peer-to-peer tunnels using its proprietary coordination server and DERP (Designated Encrypted Relay for Packets) relay network—ensuring reliable NAT traversal and sub-50ms median peer latency even behind restrictive firewalls. Identity-aware access controls are enforced at the network layer via fine-grained ACLs tied directly to enterprise identity providers such as Okta, Azure AD, and Google Workspace, enabling SSO-driven device and user authorization without certificate management. Tailscale supports up to 20,000 nodes per tailnet and offers robust operational tooling including a Kubernetes operator for seamless cluster integration, a production-ready Terraform provider for infrastructure-as-code workflows, and automated key rotation with configurable validity periods. Its Secure Edge feature extends zero-trust principles to internet-facing services by replacing public IPs with authenticated, encrypted endpoints. Built on audited cryptography and deployed by enterprises including Cloudflare, HashiCorp, and GitLab, Tailscale delivers production-grade security while abstracting away routing tables, firewall rules, and PKI overhead—making it ideal for hybrid cloud, remote engineering teams, and microservices architectures requiring consistent, policy-driven connectivity.",
+    
+        pros: [
+            "Sub-50ms median peer-to-peer latency achieved via globally distributed DERP relays and automatic NAT hole punching",
+            "Identity-aware ACLs natively integrated with Okta, Azure AD, and Google Workspace for SSO-driven, least-privilege network access",
+            "Kubernetes operator enables declarative tailnet enrollment and service mesh extension for clusters",
+            "Production-grade Terraform provider supporting full lifecycle management of tailnets, ACLs, and devices",
+            "Automated key rotation with configurable TTLs (default 30 days) and immediate revocation upon device removal",
+            "Secure Edge replaces public-facing IPs with authenticated, encrypted endpoints for external services",
+            "Supports up to 20,000 nodes per tailnet with centralized policy enforcement and real-time audit logging"
       ],
-    cons: [
-        "No native iOS/macOS app-level split tunneling--traffic from all apps on device routes through exit node unless manually configured via network extension",
-        "Limited compliance reporting: lacks pre-built SOC 2 or HIPAA audit templates (requires custom log export + third-party SIEM integration)",
-        "No built-in bandwidth shaping or QoS controls--cannot prioritize VoIP or video conferencing traffic within the mesh",
-        "Free tier restricts tailnets to 32 nodes and excludes SSO, ACLs, and audit logs--enterprise features require paid plan",
-        "Lack of multi-factor authentication (MFA) options beyond SSO providers"
+    
+        cons: [
+            "No native split-tunneling configuration per device; traffic routing policies apply uniformly across the tailnet",
+            "Limited support for legacy protocols like SMB or NetBIOS over mesh due to strict UDP-only WireGuard transport",
+            "Enterprise SSO group sync requires SCIM provisioning or manual group mapping in admin console",
+            "No built-in packet inspection, IDS/IPS, or application-layer firewalling capabilities",
+            "DERP relay dependency introduces single points of failure if custom DERP servers are not deployed"
       ],
     pricing: "From $1/user/mo",
     pricingDetail: "The Free tier supports up to 32 devices with basic features; the Teams plan ($1/user/mo billed annually) unlocks SSO, ACLs, audit logs, and priority support; the Enterprise plan adds SCIM, SAML, custom SLAs, and the Secure Edge feature.",
@@ -1337,20 +1343,25 @@ export const ALL_TOOLS: ToolData[] = [
     icon: Globe,
     description: "Secure web gateway with VPN capabilities, leveraging Cloudflare's global network.",
     longDescription:
-      `Cloudflare WARP, a zero-trust network access (ZTNA) and secure web gateway solution, has evolved into a robust enterprise-grade alternative to traditional VPNs. Built on Cloudflare's expansive Anycast network, which now spans over 350 data centers across 130+ countries, WARP continues to leverage WireGuard for its tunneling protocol, ensuring low-latency, high-throughput encrypted connections with minimal CPU usage. As of 2026, WARP has integrated advanced features such as AI-driven threat detection, enhanced by partnerships with leading cybersecurity firms. The platform now supports more granular policy controls, including dynamic access policies based on user behavior and device health. Additionally, the introduction of WARP 2.0 in early 2025 brought significant improvements, including a 20% reduction in latency and a 40% increase in throughput, making it even more suitable for high-bandwidth applications. Traffic is still routed through Cloudflare's edge infrastructure, where it undergoes DNS filtering, TLS inspection, and policy enforcement. WARP supports both client-side (WARP app for Windows, macOS, iOS, Android, and Linux) and server-side (WARP Server mode for Linux) deployments, enabling split-tunneling, SSO integration, and application-layer access controls. Benchmarks show median round-trip latency under 20 ms for 97% of users globally, with throughput typically exceeding 400 Mbps on modern hardware. While WARP excels in rapid deployment and strong security, it still lacks support for legacy protocols and requires dependency on Cloudflare's service availability.`,
+      "Cloudflare WARP is a zero-trust network access (ZTNA) and secure web gateway solution designed to provide encrypted, high-performance connectivity for end users and enterprise workforces. Built on the WireGuard protocol and implemented via Cloudflare's lightweight BoringTun userspace implementation, WARP leverages Cloudflare's global Anycast network—spanning over 350 data centers across 130+ countries—to deliver sub-20ms median latency and resilient routing. WARP 2.0 introduced significant enhancements including faster tunnel establishment, improved battery efficiency on mobile devices, and deeper integration with Cloudflare Zero Trust policies. The service offers intelligent split tunneling, allowing administrators to route only specific traffic (e.g., SaaS apps or internal resources) through the secure tunnel while leaving other traffic local. It includes built-in DNS filtering powered by Cloudflare Gateway’s threat intelligence feeds, real-time AI-driven malware and phishing detection, and optional TLS inspection for deep content scanning—all enforced at the edge without requiring on-premise hardware. Unlike traditional VPNs, WARP enforces identity-aware, least-privilege access controls aligned with Zero Trust principles, enabling granular policy enforcement based on user identity, device posture, and application context. Its architecture abstracts network complexity while delivering consistent security posture regardless of user location or device type.",
+    
     pros: [
-      "Leverages Cloudflare's global Anycast network spanning 350+ data centers across 130+ countries, providing sub-20ms median latency for 97% of users worldwide.",
-      "Enhanced with AI-driven threat detection, reducing false positives by 30% and improving overall security posture.",
-      "WireGuard-based encryption (BoringTun userspace implementation) delivers throughput exceeding 400 Mbps on modern hardware with minimal CPU overhead.",
-      "Free tier provides 15 GB/month of WARP+ optimized routing with unlimited baseline WARP - suitable for individual privacy needs and light browsing.",
-      "Split tunneling options allow selective routing: exclude trusted networks or SaaS applications from the VPN tunnel while securing all other traffic.",
-      "Client-side deployment across Windows, macOS, Linux, iOS, and Android with centralized policy management via Cloudflare Zero Trust dashboard."],
+        "Sub-20ms median latency globally due to Cloudflare's Anycast network with 350+ data centers",
+        "WireGuard-based tunneling via BoringTun ensures low CPU overhead and fast connection establishment",
+        "AI-powered real-time threat detection blocks malware, phishing, and malicious domains at the edge",
+        "Native integration with Cloudflare Zero Trust enables identity- and device-aware access policies",
+        "Granular split tunneling supports both domain-based and IP-based routing rules",
+        "Built-in DNS filtering with customizable blocklists and category-based filtering via Cloudflare Gateway",
+        "TLS inspection capability (when enabled) provides deep content inspection without client-side certificate installation"
+    ],
+    
     cons: [
-      "Primarily optimized for web traffic (HTTP/HTTPS) and DNS - does not support legacy VPN protocols like L2TP/IPsec or PPTP, limiting compatibility with legacy enterprise applications.",
-      "Privacy concerns persist: Cloudflare has visibility into DNS queries and traffic metadata, which may conflict with zero-knowledge requirements for privacy-sensitive organizations.",
-      "Limited customization for advanced routing - no support for static route tables, policy-based routing, or custom gateway configurations that network engineers require.",
-      "Performance varies significantly based on proximity to Cloudflare PoPs: users in regions with limited edge presence experience 2-3x latency increases.",
-      "No native support for site-to-site VPN tunnels or IPsec gateway connectivity - WARP is a client-to-cloud solution, not a traditional site-to-site VPN replacement."],
+        "TLS inspection requires explicit opt-in and may conflict with certain enterprise PKI deployments or compliance frameworks",
+        "Limited third-party SSO integrations compared to dedicated ZTNA vendors like Zscaler or Netskope",
+        "No native support for legacy protocols like SMB or FTP over the WARP tunnel without additional configuration",
+        "Mobile app lacks per-app tunneling controls on iOS (enforced at OS level), reducing flexibility",
+        "Enterprise reporting dashboards are less customizable than those offered by specialized secure web gateway platforms"
+    ],
     pricing: "From $7/mo",
     pricingDetail: "The free tier includes unlimited baseline WARP (WireGuard tunneling with standard routing) plus 15 GB/month of WARP+ optimized routing. WARP+ subscription at $4.99/month provides Argo Smart Routing for reduced latency. Cloudflare Zero Trust plans: Free tier (up to 50 users, basic Gateway DNS policies, 1-hour activity log retention); Teams plan at $7/user/month (annual billing) adds unlimited WARP+, 1-year audit log retention, API access, and device posture checks; Enterprise plan at $15/user/month includes advanced DLP, SAML/SCIM provisioning, dedicated support, and custom data retention policies.",
     features: [

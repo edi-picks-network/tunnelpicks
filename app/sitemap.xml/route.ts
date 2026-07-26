@@ -50,6 +50,7 @@ const BLOG_SLUGS = [
   "wireguard-vs-openvpn-vs-ipsec-2026-comprehensive-comparison",
   "split-tunneling-2026-smart-traffic-routing-strategies",
   "kubernetes-service-mesh-vpn-wireguard-istio-2026",
+  "wireguard-openvpn-ipsec-2026-real-world-benchmark-three-continents",
 ] as const;
 
 const TOOL_SLUGS = [

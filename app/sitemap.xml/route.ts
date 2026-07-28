@@ -52,7 +52,7 @@ const BLOG_SLUGS = [
   "kubernetes-service-mesh-vpn-wireguard-istio-2026",
   "wireguard-openvpn-ipsec-2026-real-world-benchmark-three-continents",
   "vpn-speed-benchmark-2026-real-world-performance-test",
-
+  "vpn-obfuscation-stealth-protocols-deep-packet-inspection-2026",
 ] as const;
 
 const TOOL_SLUGS = [

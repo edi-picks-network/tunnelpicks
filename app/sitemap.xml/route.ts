@@ -56,7 +56,8 @@ const BLOG_SLUGS = [
   "vpn-for-gaming-2026-ping-latency-guide",
   "site-to-site-vpn-vs-cloud-vpn-gateway-2026-comparison",
   "split-tunneling-vpn-proxy-remote-work-2026",
-  "tailscale-vs-zerotier-vs-headscale-2026"] as const;
+  "tailscale-vs-zerotier-vs-headscale-2026",
+  "webrtc-leak-prevention-vpn-real-ip-2026"] as const;
 
 const TOOL_SLUGS = [
   "nordvpn",

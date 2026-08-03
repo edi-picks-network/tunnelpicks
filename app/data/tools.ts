@@ -1483,7 +1483,7 @@ export const ALL_TOOLS: ToolData[] = [
       "Connector-based deployment model supporting Windows/Linux servers and Kubernetes clusters",
       "Continuous authentication with adaptive session timeouts based on user behavior and device risk score"
     ],
-    useCase: "- 适用于金融行业分支机构员工安全访问核心交易系统（如SWIFT、Core Banking），无需暴露内部IP或开放防火墙端口。  \n- 适用于医疗集团跨院区医生远程调阅PACS影像系统，通过设备健康度（BitLocker状态、Windows Defender实时防护）动态授权访问权限。  \n- 适用于SaaS厂商向企业客户交付私有化部署的API服务，以零信任方式替代传统VPN网关，满足GDPR和HIPAA数据驻留要求。",
+    useCase: "- Ideal for financial-institution branch employees securely accessing core trading systems (e.g., SWIFT, Core Banking) without exposing internal IPs or opening firewall ports.  \n- Suitable for hospital groups letting doctors remotely review PACS imaging across campuses, with access authorized dynamically based on device health (BitLocker status, Windows Defender real-time protection).  \n- Fits SaaS vendors delivering privately deployed API services to enterprise clients, replacing legacy VPN gateways with a zero-trust model that meets GDPR and HIPAA data-residency requirements.",
     websiteUrl: "https://www.zscaler.com/products/zscaler-private-access",
     alternatives: [
         "cloudflare-warp-enterprise",
@@ -2225,7 +2225,7 @@ That said, Twingate is not a universal replacement for all remote access needs. 
       "TLS 1.3 and DoH support for encrypted upstream queries",
       "Systemd service integration with auto-restart and graceful reload"
     ],
-    useCase: "- 企业IT管理员部署内部DNS代理，为跨国员工精准解析Netflix、BBC iPlayer等流媒体服务，同时保障本地政务系统走内网DNS。\n- 技术爱好者在树莓派上搭建轻量级家庭DNS网关，结合Pi-hole实现广告过滤+智能流媒体路由双功能。\n- 开发者构建CI/CD测试环境，通过动态DNS响应模拟不同区域API端点，验证地理围栏逻辑。",
+    useCase: "- Lets enterprise IT administrators run an internal DNS proxy that resolves streaming services like Netflix and BBC iPlayer for employees across countries while keeping local government systems on the internal DNS.  \n- Enables tech enthusiasts to build a lightweight home DNS gateway on a Raspberry Pi, combining ad filtering and smart streaming routing with Pi-hole.  \n- Helps developers set up CI/CD test environments that simulate API endpoints in different regions via dynamic DNS responses to validate geofencing logic.",
     websiteUrl: "https://www.smartdnsproxy.com",
     alternatives: [
         "socks5-proxy",
@@ -2826,7 +2826,7 @@ That said, Twingate is not a universal replacement for all remote access needs. 
       "Sequence diagram generation for multi-request flows (e.g., OAuth2 handshakes)",
       "Session comparison tool with byte-level diff and response time delta metrics"
     ],
-    useCase: "- 移动端App开发团队用于调试iOS/Android应用的HTTPS API调用，特别是绕过证书固定（Certificate Pinning）后的实时请求篡改与响应模拟。  \n- 前端团队在CI/CD中集成Charles CLI导出HAR文件，结合Puppeteer进行自动化接口契约测试。  \n- 企业安全团队利用其TLS解密能力分析内部微服务间gRPC-Web流量，识别未加密敏感字段传输风险。",
+    useCase: "- Mobile app teams use this to debug HTTPS API calls from iOS/Android apps, especially real-time request tampering and response simulation after working around certificate pinning.  \n- Frontend teams integrate the Charles CLI in CI/CD to export HAR files and run automated API contract tests with Puppeteer.  \n- Enterprise security teams leverage its TLS decryption to inspect gRPC-Web traffic between internal microservices and identify risks from unencrypted sensitive fields.",
     websiteUrl: "https://www.charlesproxy.com",
     alternatives: [
         "mitmproxy",

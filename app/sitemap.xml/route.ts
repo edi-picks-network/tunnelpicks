@@ -59,7 +59,8 @@ const BLOG_SLUGS = [
   "tailscale-vs-zerotier-vs-headscale-2026",
   "webrtc-leak-prevention-vpn-real-ip-2026",
   "ipv6-vpn-adoption-dual-stack-leaks-2026",
-  "tls-traffic-interception-inspection-2026-guide"] as const;
+  "tls-traffic-interception-inspection-2026-guide",
+  "wireguard-mesh-case-study-saas-zero-trust"] as const;
 
 const TOOL_SLUGS = [
   "nordvpn",

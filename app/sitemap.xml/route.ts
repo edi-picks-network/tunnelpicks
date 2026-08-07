@@ -60,7 +60,8 @@ const BLOG_SLUGS = [
   "webrtc-leak-prevention-vpn-real-ip-2026",
   "ipv6-vpn-adoption-dual-stack-leaks-2026",
   "tls-traffic-interception-inspection-2026-guide",
-  "wireguard-mesh-case-study-saas-zero-trust"] as const;
+  "wireguard-mesh-case-study-saas-zero-trust",
+  "opnsense-vs-untangle-vs-endian-firewall-2026-utm-comparison"] as const;
 
 const TOOL_SLUGS = [
   "nordvpn",

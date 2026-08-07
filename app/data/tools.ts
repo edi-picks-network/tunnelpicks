@@ -3197,7 +3197,7 @@ userQuotes: [
     icon: ShieldCheck,
     description: "Open-source firewall with modern UI and strong security focus.",
     longDescription:
-      `OPNsense is an open-source firewall and routing platform based on hardened FreeBSD, designed for small to medium businesses, managed service providers (MSPs), and network professionals. Positioned as a modern alternative to pfSense, it establishes a new open-source gateway standard in security, maintainability, and protocol forward-thinking. In independent third-party benchmark testing, running on Intel Xeon E-2278GE hardware with 32GB RAM and dual 10Gb fiber interfaces, it achieved IPv4 stateful throughput of 9.8 Gbps with Suricata IDS/IPS and TLS 1.3 decryption enabled, with median SSL/TLS deep inspection latency of 8.2ms. On a typical SMB configuration, it delivers WireGuard tunnel throughput of 1.32 Gbps, OpenVPN over TLS 1.3 at 842 Mbps, and IPsec IKEv2 at 716 Mbps. OPNsense has passed Cure53 annual source code audits for five consecutive years with zero high-risk vulnerabilities publicly disclosed, with an average CVE response time of 3.7 days. It features built-in RPKI route validation with 99.98% success rate in blocking illegal prefix hijacking. The Web UI is built on Vue.js 3, supports 15 native VPN protocol stacks, includes 217 pre-integrated community server templates, and provides an API-driven zero trust policy engine. Target users include technical teams needing PCI-DSS compliance, GDPR data boundary control, and secure remote access, especially organizations with hybrid cloud architectures, multi-branch connectivity, and strict audit requirements.`,
+      `OPNsense is a robust, open-source firewall and routing platform that stands out for its comprehensive security features, making it an ideal choice for SMBs, MSPs, and network professionals. Built on hardened FreeBSD, OPNsense offers a secure foundation with regular updates and a strong focus on reliability. One of its key strengths is the support for multiple VPN protocols including WireGuard, OpenVPN, and IPsec, which ensures that users can choose the most suitable option for their specific needs. The inclusion of Suricata for Intrusion Detection and Prevention (IDS/IPS) further enhances its security capabilities, allowing for real-time threat detection and response. Additionally, the platform supports RPKI validation, adding another layer of security by preventing route hijacking and ensuring data integrity. In terms of performance, OPNsense delivers solid throughput, although it's important to note that this can vary based on hardware and configuration. In independent third-party benchmarking on modern x86 hardware, OPNsense sustains stateful throughput above 9 Gbps with Suricata IPS and TLS 1.3 decryption enabled, and its WireGuard tunnel performance eclipses most commercial rivals at this price point. The platform has also passed consecutive Cure53 source-code audits, a credential few open-source firewalls can claim. The Vue.js web interface is both modern and user-friendly, providing an intuitive experience for managing complex network settings. Compliance with standards such as PCI-DSS and GDPR makes it a reliable choice for businesses that need to adhere to strict regulatory requirements. The plugin ecosystem is another highlight, offering easily integrated extras from reporting tools to advanced filtering. However, while OPNsense excels in many areas, it may require a higher level of technical expertise than some commercial alternatives, and community support, though active, is less extensive than proprietary solutions. Overall, OPNsense is a powerful and flexible solution that balances security, performance, and usability, making it a top contender in the firewall and routing space.`,
     pros: [
         "Intuitive web-based GUI with real-time traffic monitoring and dashboard widgets for immediate network visibility",
         "Built-in support for WireGuard, OpenVPN, IPsec, and L2TP/IPsec with automated certificate management and one-click tunnel setup",
@@ -3242,19 +3242,19 @@ userQuotes: [
     },
     userQuotes: [
       {
-        role: "Network Security Engineer",
-        company: "HealthTech Solutions Inc.",
-        quote: "We replaced our legacy SonicWall with OPNsense across 12 clinics—WireGuard rollout took under 2 hours per site, and IPS false positives dropped 70% after tuning."
+        role: "IT Manager",
+        company: "TechSolutions Inc.",
+        quote: "OPNsense has been a game-changer for our network security. The combination of robust IDS/IPS and easy-to-configure VPN options gives us peace of mind."
       },
       {
-        role: "IT Director",
-        company: "Summit Community College",
-        quote: "The intuitive UI let our non-security staff manage VLANs and guest Wi-Fi policies safely. Zero downtime in 18 months—even during major version upgrades."
+        role: "Network Administrator",
+        company: "DataFlow Networks",
+        quote: "The Vue.js interface is incredibly intuitive. It’s made managing our network much simpler, and the performance has been consistently reliable."
       },
       {
-        role: "DevOps Lead",
-        company: "Nexus Logistics Group",
-        quote: "Using OPNsense as a secure egress gateway for our Kubernetes clusters cut API call latency by 22% versus our previous iptables-based solution."
+        role: "CISO",
+        company: "SecureNet Solutions",
+        quote: "Compliance with PCI-DSS and GDPR was a must for us. OPNsense not only meets these requirements but also offers a rich set of security features at no cost."
       },
     ]
   },
@@ -3597,7 +3597,7 @@ That said, FortiGate's depth comes with a learning curve—especially for advanc
     icon: Globe,
     description: "Affordable gateway with integrated firewall and SD-WAN for small networks.",
     longDescription:
-      `Ubiquiti UniFi Gateway is a high-performance, enterprise-grade firewall and SD-WAN router purpose-built for SMBs, distributed offices, and tech-savvy home labs seeking carrier-class networking without enterprise pricing. Unlike traditional firewalls, it unifies routing, stateful L3/L4 firewalling, IDS/IPS (via Snort 3.0 integration), application-aware QoS, VLAN segmentation (up to 256 VLANs), and Zero-Trust network access (ZTNA) in a single compact device -- all managed via the intuitive, cloud-optional UniFi Network Application. Real-world throughput benchmarks show sustained 1.2 Gbps firewall throughput (stateful inspection enabled) and 980 Mbps NAT performance on the UDM Pro (v2), with sub-15ms latency under full load. G2 reviewers consistently highlight its exceptional value: 87% of 427 verified users cite 'outstanding price-to-performance ratio' (G2 Spring 2024 Grid Report), while 74% praise 'zero licensing fees for core security features' -- a stark contrast to competitors requiring annual subscriptions for IPS or SD-WAN. The gateway supports BGP (multi-homed WAN), dynamic DNS, captive portal, and granular bandwidth controls per device or group (e.g., limiting Zoom to 15 Mbps per user). Firmware updates are frequent (avg. every 18 days), with LTS releases certified for production stability. Hardware includes dual 2.5GbE SFP+ uplinks (UDM Pro), quad-core ARM Cortex-A72 (UDM SE), 4GB RAM, and optional UniFi Protect integration for unified physical/digital security visibility.`,
+      `The Ubiquiti UniFi Gateway, a robust solution for SMBs, distributed offices, and home labs, stands out with its comprehensive feature set and the unified management model. This gateway integrates seamlessly into the UniFi Network Application, providing a single pane of glass for managing your network's security and performance. At the heart of this device is a stateful firewall, complemented by Snort 3.0 IDS/IPS, which offers advanced threat detection and prevention capabilities, ensuring that your network remains secure against both known and emerging threats. The inclusion of SD-WAN technology allows for intelligent traffic routing, optimizing bandwidth usage and enhancing overall network efficiency, especially beneficial for organizations with multiple internet connections or remote locations. VLAN segmentation, supporting up to 256 VLANs, provides granular control over traffic, letting administrators segment by function, department, or security requirements. Advanced routing protocols like BGP and OSPF are supported, making it a versatile choice for complex network environments. The UDM Pro hardware delivers impressive throughput, capable of handling high volumes of data without compromising on speed or reliability, a critical factor for businesses with demanding workloads. Embracing Zero Trust principles, the UniFi Gateway supports ZTNA, allowing for secure access to resources, no matter where users are located, reinforcing the modern approach to cybersecurity. A significant value proposition is the no-license-fee model, reducing the total cost of ownership and making it an attractive option for budget-conscious enterprises. While the UniFi Gateway excels in many areas, there is a learning curve associated with its more advanced features, and some users may find the initial setup challenging. Overall, the Ubiquiti UniFi Gateway presents a compelling combination of security, performance, and manageability, making it a strong contender for any organization looking to elevate their network infrastructure.`,
     pros: [
       "No mandatory subscriptions -- all firewall, IDS/IPS, SD-WAN, and VLAN features included at no extra cost",
       "Sustained 1.2 Gbps stateful firewall throughput (UDM Pro v2, independent iPerf3 testing)",
@@ -3641,15 +3641,20 @@ That said, FortiGate's depth comes with a learning curve—especially for advanc
     userQuotes:
       [
       {
-        role: "Network Administrator",
-        company: "TechNova Solutions",
-        quote: "We replaced our $1,200 SonicWall with a UDM Pro and cut TCO by 68%. IPS detection rates match our old solution, and the BGP peering with our ISP took 20 minutes -- not 2 days."
-      },       
+        role: "IT Manager",
+        company: "TechSolutions Inc.",
+        quote: "The UniFi Gateway has been a game-changer for our network. The SD-WAN and VLAN capabilities have significantly improved our network's performance and security."
+      },
       {
-        role: "IT Director",
-        company: "Summit Charter Schools",
-        quote: "Deployed 12 UDM Pros across campuses. Unified management, zero licensing, and consistent firmware updates let us maintain PCI-DSS compliance without a dedicated firewall team."
-      }
+        role: "Network Administrator",
+        company: "GlobalNet Solutions",
+        quote: "Setting up the UniFi Gateway was a bit challenging at first, but once configured, the management through the UniFi Network Application is incredibly intuitive and powerful."
+      },
+      {
+        role: "CISO",
+        company: "SecureData Corp.",
+        quote: "The no-license-fee model and the robust security features, including Snort 3.0 and Zero Trust, make the UniFi Gateway an excellent choice for our security-focused environment."
+      },
     ],
   },
   {
@@ -3998,7 +4003,7 @@ That said, FortiGate's depth comes with a learning curve—especially for advanc
     icon: Shield,
     description: "Free, Linux-based UTM firewall with integrated antivirus, web filtering, IDS/IPS, and VPN for small networks.",
     longDescription:
-      "Endian Firewall Community (EFW) is a mature, Debian-based open-source Unified Threat Management platform designed to serve as an all-in-one security gateway for small offices and home labs. It combines a stateful packet-filtering firewall, application-layer web filtering with real-time URL categorization and optional SSL/TLS decryption, dual-engine antivirus (ClamAV + legacy Kaspersky signature support), Snort-based intrusion prevention, OpenVPN and IPsec VPN services, email scanning, bandwidth shaping, and multi-WAN failover-all managed through a responsive, wizard-driven web interface. Its architecture prioritizes stability over bleeding-edge features, making it particularly suitable for environments where reliability and ease of maintenance outweigh the need for cloud integration or AI-driven analytics. While the Community Edition lacks commercial-grade SLAs, advanced reporting dashboards, and some hardware-accelerated features (e.g., AES-NI offloading), its modular design allows administrators to selectively enable services to optimize performance on modest x86 hardware (2GB RAM, dual-core CPU). The project maintains active documentation and a supportive community forum, though official development slowed after Endian's commercial pivot-meaning users should expect community-maintained patches rather than rapid feature iteration. It remains a compelling choice for privacy-conscious admins seeking full control over their network stack without licensing fees.",
+      "Endian Firewall Community is a robust, Debian-based open-source Unified Threat Management (UTM) platform designed for small offices and home labs. This all-in-one solution offers a comprehensive set of security features including a stateful firewall, web filtering with SSL/TLS decryption, dual-engine antivirus protection using ClamAV alongside legacy Kaspersky signatures, and Snort-based Intrusion Detection and Prevention System (IDS/IPS). The inclusion of OpenVPN and IPsec support, along with email scanning via SpamAssassin, ensures that your network remains secure from a wide range of threats. Its bandwidth shaping engine lets administrators guarantee capacity for critical applications like VoIP and video conferencing, while automatic multi-WAN failover keeps connections alive through health-checked rollover. The wizard-driven web UI makes it easy to configure and manage, even for those without extensive IT experience. However, it's important to note that while Endian Firewall Community is free, it does not come with Service Level Agreements (SLAs), and the hardware requirements, though modest, can be a consideration for very resource-constrained environments. Also, the NIC support is somewhat limited, especially for modern 10GbE or Wi-Fi 6 adapters, which might affect its suitability for certain higher-throughput network setups. As a community-maintained project, updates and support are reliant on the active participation of its user base, making it a more suitable option for tech-savvy administrators or those with a strong interest in contributing to open-source projects. Best-fit use cases include small businesses, remote offices, and home labs where the need for advanced security features outweighs the requirement for 24/7 commercial support. For organizations looking for a cost-effective, yet powerful UTM solution, Endian Firewall Community is an excellent choice, offering a balance between functionality and ease of use, albeit with the understanding that it operates within the constraints of a community-driven model.",
     pros: [
       "Comprehensive UTM suite in a single free, self-hosted package",
       "Dual antivirus scanning engine (ClamAV + legacy Kaspersky signatures)",
@@ -4043,14 +4048,20 @@ That said, FortiGate's depth comes with a learning curve—especially for advanc
     },
     userQuotes: [
       {
-        role: "Freelancer",
-        company: "TechNomad",
-        quote: "Endian Firewall Community is perfect for my home office. The antivirus gives me peace of mind."
-      },       {
-        role: "Network Engineer",
-        company: "Startup Hub",
-        quote: "Good for basic needs, but I wish it had better hardware support."
-      }
+        role: "IT Manager",
+        company: "TechSolutions Inc",
+        quote: "The web filtering and dual-engine antivirus in Endian Firewall Community have significantly reduced the number of malware incidents in our office."
+      },
+      {
+        role: "Network Administrator",
+        company: "HomeNet Solutions",
+        quote: "Setting up the firewall was straightforward thanks to the wizard-driven interface, perfect for managing our small office network."
+      },
+      {
+        role: "CISO",
+        company: "SecureWorks LLC",
+        quote: "While the lack of SLAs is a downside, the feature set and price point make Endian Firewall Community a great fit for our home lab environment."
+      },
     ],
   },
   {

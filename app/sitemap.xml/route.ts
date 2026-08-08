@@ -61,7 +61,8 @@ const BLOG_SLUGS = [
   "ipv6-vpn-adoption-dual-stack-leaks-2026",
   "tls-traffic-interception-inspection-2026-guide",
   "wireguard-mesh-case-study-saas-zero-trust",
-  "opnsense-vs-untangle-vs-endian-firewall-2026-utm-comparison"] as const;
+  "opnsense-vs-untangle-vs-endian-firewall-2026-utm-comparison",
+  "internet-freedom-vpn-proxy-tunnel-acceleration-2026"] as const;
 
 const TOOL_SLUGS = [
   "nordvpn",
